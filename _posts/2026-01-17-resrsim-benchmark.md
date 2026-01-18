@@ -50,17 +50,17 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 #### Block Pressure
     
-![png](/assets/images/benchmark_files/benchmark_19_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_19_1.png" | relative_url }})
     
 
     
-![png](/assets/images/benchmark_files/benchmark_19_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_19_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_19_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_19_3.png" | relative_url }})
     
 
 
@@ -70,19 +70,19 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_21_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_21_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_21_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_21_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_21_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_21_3.png" | relative_url }})
     
 
 
@@ -91,19 +91,19 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_23_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_23_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_23_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_23_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_23_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_23_3.png" | relative_url }})
     
 
 
@@ -112,19 +112,19 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_24_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_24_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_24_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_24_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_24_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_24_3.png" | relative_url }})
     
 
 
@@ -136,42 +136,19 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_26_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_26_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_26_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_26_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_26_3.png)
-    
-
-
-
-
-
-
-
-
-    
-![png](/assets/images/benchmark_files/benchmark_27_1.png)
-    
-
-
-
-    
-![png](/assets/images/benchmark_files/benchmark_27_2.png)
-    
-
-
-
-    
-![png](/assets/images/benchmark_files/benchmark_27_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_26_3.png" | relative_url }})
     
 
 
@@ -181,21 +158,20 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
 
-
     
-![png](/assets/images/benchmark_files/benchmark_28_1.png)
-    
-
-
-
-    
-![png](/assets/images/benchmark_files/benchmark_28_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_27_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_28_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_27_2.png" | relative_url }})
+    
+
+
+
+    
+![png]({{ "/assets/images/benchmark_files/benchmark_27_3.png" | relative_url }})
     
 
 
@@ -207,19 +183,43 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_29_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_28_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_29_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_28_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_29_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_28_3.png" | relative_url }})
+    
+
+
+
+
+
+
+
+
+
+    
+![png]({{ "/assets/images/benchmark_files/benchmark_29_1.png" | relative_url }})
+    
+
+
+
+    
+![png]({{ "/assets/images/benchmark_files/benchmark_29_2.png" | relative_url }})
+    
+
+
+
+    
+![png]({{ "/assets/images/benchmark_files/benchmark_29_3.png" | relative_url }})
     
 
 
@@ -234,13 +234,13 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_32_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_32_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_32_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_32_2.png" | relative_url }})
     
 
 
@@ -251,19 +251,19 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_34_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_34_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_34_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_34_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_34_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_34_3.png" | relative_url }})
     
 
 
@@ -273,19 +273,19 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_36_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_36_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_36_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_36_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_36_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_36_3.png" | relative_url }})
     
 
 
@@ -358,13 +358,13 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_46_0.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_46_0.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_46_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_46_1.png" | relative_url }})
     
 
 
@@ -522,25 +522,25 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_65_0.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_65_0.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_66_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_66_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_66_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_66_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_66_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_66_3.png" | relative_url }})
     
 
 
@@ -550,19 +550,19 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_69_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_69_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_69_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_69_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_69_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_69_3.png" | relative_url }})
     
 
 
@@ -574,19 +574,19 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_73_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_73_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_73_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_73_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_73_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_73_3.png" | relative_url }})
     
 
 
@@ -597,40 +597,19 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_75_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_75_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_75_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_75_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_75_3.png)
-    
-
-
-
-
-
-
-    
-![png](/assets/images/benchmark_files/benchmark_76_1.png)
-    
-
-
-
-    
-![png](/assets/images/benchmark_files/benchmark_76_2.png)
-    
-
-
-
-    
-![png](/assets/images/benchmark_files/benchmark_76_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_75_3.png" | relative_url }})
     
 
 
@@ -639,19 +618,40 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_77_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_76_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_77_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_76_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_77_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_76_3.png" | relative_url }})
+    
+
+
+
+
+
+
+    
+![png]({{ "/assets/images/benchmark_files/benchmark_77_1.png" | relative_url }})
+    
+
+
+
+    
+![png]({{ "/assets/images/benchmark_files/benchmark_77_2.png" | relative_url }})
+    
+
+
+
+    
+![png]({{ "/assets/images/benchmark_files/benchmark_77_3.png" | relative_url }})
     
 
 
@@ -663,18 +663,18 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
     
-![png](/assets/images/benchmark_files/benchmark_79_1.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_79_1.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_79_2.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_79_2.png" | relative_url }})
     
 
 
 
     
-![png](/assets/images/benchmark_files/benchmark_79_3.png)
+![png]({{ "/assets/images/benchmark_files/benchmark_79_3.png" | relative_url }})
     
 
