@@ -1,11 +1,13 @@
 ---
-layout:default
+layout: default
 title: "Benchmark results of resrsim"
 date: 2026-01-17
 ---
 
-    Current OS: Darwin
-    simuexe path: build/bin/simuapp
+# System
+* Current OS: Darwin
+
+* simuexe path: build/bin/simuapp
 
 
 ## Function
