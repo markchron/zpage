@@ -36,16 +36,16 @@ def update_image_paths(file_path, prefix="/assets/images/"):
     changes_made = 0
     
     # Pattern for markdown image syntax: ![alt](path)
-    # Matches images that don't already start with the prefix or http/https
-    pattern = r'!\[([^\]]*)\]\((?!http|https|/assets/images/)([^)]+)\)'
+    # Matches images that don't already start with {{ or http/https
+    pattern = r'!\[([^\]]*)\]\((?!http|https|\{\{)([^)]+)\)'
     
     def replace_path(match):
         nonlocal changes_made
         alt_text = match.group(1)
         image_path = match.group(2)
         
-        # Add the prefix
-        new_path = f"{prefix}{image_path}"
+        # Add the prefix with Jekyll's relative_url filter
+        new_path = f'{{{{ "{prefix}{image_path}" | relative_url }}}}'
         changes_made += 1
         
         print(f"  Updating: {image_path} -> {new_path}")
