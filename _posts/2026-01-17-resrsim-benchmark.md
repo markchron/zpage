@@ -1,37 +1,8 @@
-# Setup
-
-1. select kernel before executing current jupyter book
-2. Install `ipykernel` package. For a virtual environment, open a terminal, and active the environment. 
-
-    ```bash
-    python -m venv .venv
-    source .venv/bin/activate
-    ```
-
-3. Run `which python` to make sure the right virtual environment activated
-4. Install requirments by `pip install -r requirements.txt`
-4. Install by `python -m pip install ipykernel -U --force-reinstall`. 
-5. install dependent packages `python -m pip install pandas numpy matplotlib trame trame-vtk trame-vuetify vtk`
-
-The following is optional:
-1. > ModuleNotFoundError: No module named 'distutils.cmd' 
-
-    ```bash
-    sudo apt-get install python3-distutils
-    ```
-
-2. > ERROR: Could not install packages due to an OSError: Could not find a suitable TLS CA certificate bundle, invalid path: /etc/ssl/certs/ca-certificates.crt
-
-    It indicates that your system is missing the CA certificates    required for secure HTTPS connections. Install CA certificates by
-    ```bash
-    sudo apt-get install --reinstall ca-certificates
-    ```
-    After installing the certificates, update them
-    ```bash
-    sudo update-ca-certificates
-    ```
-
-3. `pip install jupyter` if needs
+---
+layout:default
+title: "Benchmark results of resrsim"
+date: 2026-01-17
+---
 
     Current OS: Darwin
     simuexe path: build/bin/simuapp
@@ -47,10 +18,7 @@ The following is optional:
 ### Load ECL
 
 ### Load SMY File
-Load the SMY file (`spe04b.smy`) into a pandas DataFrame, ensuring proper parsing of the data.
 
-    /Users/mark/Documents/workspace/hatch/app/build/test/data/spe04b.dat
-    
         61 116.4600  1   3650.000     0.07             27.29             99.73                      29.97   43.162   0.0208   0.0020   3.4502
     
     ============================================================
@@ -73,34 +41,15 @@ Load the SMY file (`spe04b.smy`) into a pandas DataFrame, ensuring proper parsin
     ============================================================
     
     
-
-
-    Checking SMY file path: /Users/mark/Documents/workspace/hatch/app/build/test/data//spe04b.smy
-    File exists: True
-    SMY data loaded successfully
-
-
 ## Select and Plot Columns
 Select specific columns from the loaded DataFrames and plot them using matplotlib. For example, plot `TIME` vs `TEMP 1-1-4` from `stars_spe4b_special.csv`.
 
 ### Cell property
 
 #### Block Pressure
-
-
-
-
-
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-
-
-
-
     
 ![png](benchmark_files/benchmark_19_1.png)
     
-
-
 
     
 ![png](benchmark_files/benchmark_19_2.png)
@@ -114,11 +63,6 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
 #### Block Temperature
-
-
-
-
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 
 
 
@@ -144,12 +88,6 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
 
-
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-
-
-
-
     
 ![png](benchmark_files/benchmark_23_1.png)
     
@@ -167,10 +105,6 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
     
 
 
-
-
-
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 
 
 
@@ -197,9 +131,6 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
 
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-
-
 
 
     
@@ -221,8 +152,6 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
 
-
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 
 
 
@@ -247,7 +176,6 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
 
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 
 
 
@@ -272,7 +200,6 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
 
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 
 
 
@@ -301,8 +228,6 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
 
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-
 
 
 
@@ -319,10 +244,6 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 #### Producer Corner
 
-
-
-
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 
 
 
@@ -349,11 +270,6 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 
 
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-
-
-
-
     
 ![png](benchmark_files/benchmark_36_1.png)
     
@@ -373,33 +289,8 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 
 # 3D
 
-```
-python -m pip install --upgrade pip
-python -m pip install pyvista
-```
-In Jupyter Notebook, `pyvista.set_jupyter_backend("trame")` must install trame by `pip install trame trame-vtk trame-vuetify`
-
-     None
-
-
-    File /Users/mark/Documents/workspace/hatch/app/build-imperial\test\data\corner.dat not exist
-    libc++abi: terminating due to uncaught exception of type std::runtime_error: File /Users/mark/Documents/workspace/hatch/app/build-imperial\test\data\corner.dat not exist
-
-
-    PyVista not installed. Skipping 3D visualization.
-
-
-    PyVista is not installed. Skipping interactive 3D visualization.
-
-
 # Buckley- Leverett
 
-Two phase, isothermal problem
-variable order: [Sw, P, T, So, X0, X1, Sg]
-
-Acc w.r.t. [Sw, So, Sg, X0, X1, P, T]
-
-    [MacBook-Air.local:62725] shmem: mmap: an error occurred while determining whether or not /var/folders/zj/_m6vvrd158z_rx15qsbyk6c40000gn/T//ompi.MacBook-Air.501/jf.0/3030843392/sm_segment.MacBook-Air.501.b4a70000.0 could be created.
     
     =========================================================================================================================================
     ------Time Step----- --Time-- -----------------Production----------------- ---------Injection-------- --mat--- ------Maximum Changes-----
@@ -415,13 +306,6 @@ Acc w.r.t. [Sw, So, Sg, X0, X1, P, T]
          6 3.51e-04  8      0.001     1.00                                                           1.00    3.573  13.3953   0.1495   0.0213
          7 4.10e-04  8      0.002     1.00                                                           1.00    4.521  15.2025   0.1385   0.0215
          8 4.97e-04  9      0.002     1.00                                                           1.00    5.403  18.1014   0.1466   0.0223
-
-
-    /Users/mark/Documents/workspace/hatch/app/build/test/data/buckley.dat
-    
-    No text to display.
-
-
          9 5.87e-04 12      0.003     1.00                                                           1.00    6.285  21.5336   0.1617   0.0226
         10 5.87e-04 13      0.004     1.00                                                           1.00    7.184  20.8806   0.1476   0.0212
         11 5.42e-04 10      0.004     1.00                                                           1.00    8.009  18.1082   0.1245   0.0195
@@ -466,7 +350,6 @@ Acc w.r.t. [Sw, So, Sg, X0, X1, P, T]
 
 ### Load Benchmark
 
-    File exists: True
 
 
 ### Buckley Plot
@@ -628,8 +511,6 @@ Acc w.r.t. [Sw, So, Sg, X0, X1, P, T]
     
 
 
-    SPE4C SMY data loaded successfully
-
 
 #### Load CMG
 
@@ -641,13 +522,6 @@ Acc w.r.t. [Sw, So, Sg, X0, X1, P, T]
     
 ![png](benchmark_files/benchmark_65_0.png)
     
-
-
-
-
-
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-
 
 
 
@@ -669,293 +543,6 @@ Acc w.r.t. [Sw, So, Sg, X0, X1, P, T]
 
 
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th colspan="3" halign="left">CRNR PRDCR</th>
-    </tr>
-    <tr>
-      <th></th>
-      <th>TIME</th>
-      <th>Well</th>
-      <th>Water Rate SC</th>
-      <th>Oil Rate SC</th>
-    </tr>
-    <tr>
-      <th></th>
-      <th>(day)</th>
-      <th>(psi)</th>
-      <th>(bbl/day)</th>
-      <th>(bbl/day)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0.000000</td>
-      <td>17.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1.000000</td>
-      <td>17.0</td>
-      <td>0.010674</td>
-      <td>1.314478</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3.233556</td>
-      <td>17.0</td>
-      <td>0.019602</td>
-      <td>1.134381</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>8.008371</td>
-      <td>17.0</td>
-      <td>0.024041</td>
-      <td>0.977696</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>17.205988</td>
-      <td>17.0</td>
-      <td>0.024555</td>
-      <td>0.871750</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>time</th>
-      <th>bhpres1</th>
-      <th>vratesc_aquatic1</th>
-      <th>vratesc_oleic1</th>
-      <th>vratesc_gasoline1</th>
-      <th>vratesc_aquatic1_bbl</th>
-      <th>vratesc_oleic1_bbl</th>
-      <th>vratesc_gasoline1_bbl</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0.000000</td>
-      <td>17.0</td>
-      <td>0.000000e+00</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000e+00</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.100000</td>
-      <td>17.0</td>
-      <td>4.230364e-07</td>
-      <td>219.808828</td>
-      <td>0.0</td>
-      <td>7.534605e-08</td>
-      <td>39.149647</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.277939</td>
-      <td>17.0</td>
-      <td>5.819396e-02</td>
-      <td>183.875946</td>
-      <td>0.0</td>
-      <td>1.036479e-02</td>
-      <td>32.749724</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.550292</td>
-      <td>17.0</td>
-      <td>8.109104e-02</td>
-      <td>164.496353</td>
-      <td>0.0</td>
-      <td>1.444294e-02</td>
-      <td>29.298069</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.912805</td>
-      <td>17.0</td>
-      <td>9.108824e-02</td>
-      <td>153.538469</td>
-      <td>0.0</td>
-      <td>1.622352e-02</td>
-      <td>27.346385</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>1.349764</td>
-      <td>17.0</td>
-      <td>9.650219e-02</td>
-      <td>146.251313</td>
-      <td>0.0</td>
-      <td>1.718778e-02</td>
-      <td>26.048487</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>1.847064</td>
-      <td>17.0</td>
-      <td>1.000020e-01</td>
-      <td>140.655582</td>
-      <td>0.0</td>
-      <td>1.781112e-02</td>
-      <td>25.051844</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2.397544</td>
-      <td>17.0</td>
-      <td>1.025027e-01</td>
-      <td>135.967380</td>
-      <td>0.0</td>
-      <td>1.825653e-02</td>
-      <td>24.216839</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>3.000706</td>
-      <td>17.0</td>
-      <td>1.043151e-01</td>
-      <td>131.976211</td>
-      <td>0.0</td>
-      <td>1.857932e-02</td>
-      <td>23.505981</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>3.590357</td>
-      <td>17.0</td>
-      <td>1.055026e-01</td>
-      <td>128.903900</td>
-      <td>0.0</td>
-      <td>1.879083e-02</td>
-      <td>22.958779</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>4.457174</td>
-      <td>17.0</td>
-      <td>1.065898e-01</td>
-      <td>125.525998</td>
-      <td>0.0</td>
-      <td>1.898446e-02</td>
-      <td>22.357148</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>5.775798</td>
-      <td>17.0</td>
-      <td>1.075798e-01</td>
-      <td>121.635003</td>
-      <td>0.0</td>
-      <td>1.916079e-02</td>
-      <td>21.664132</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>7.546848</td>
-      <td>17.0</td>
-      <td>1.083946e-01</td>
-      <td>117.312264</td>
-      <td>0.0</td>
-      <td>1.930591e-02</td>
-      <td>20.894219</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>9.708366</td>
-      <td>17.0</td>
-      <td>1.089617e-01</td>
-      <td>112.629412</td>
-      <td>0.0</td>
-      <td>1.940691e-02</td>
-      <td>20.060167</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>12.216531</td>
-      <td>17.0</td>
-      <td>1.091947e-01</td>
-      <td>107.882729</td>
-      <td>0.0</td>
-      <td>1.944843e-02</td>
-      <td>19.214746</td>
-      <td>0.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
-
-
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 
 
 
@@ -984,11 +571,6 @@ Acc w.r.t. [Sw, So, Sg, X0, X1, P, T]
 
 
 
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-
-
-
-
     
 ![png](benchmark_files/benchmark_73_1.png)
     
@@ -1008,10 +590,6 @@ Acc w.r.t. [Sw, So, Sg, X0, X1, P, T]
 
 #### Block Temperature
 
-
-
-
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 
 
 
@@ -1036,10 +614,6 @@ Acc w.r.t. [Sw, So, Sg, X0, X1, P, T]
 
 
 
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-
-
-
 
     
 ![png](benchmark_files/benchmark_76_1.png)
@@ -1058,10 +632,6 @@ Acc w.r.t. [Sw, So, Sg, X0, X1, P, T]
     
 
 
-
-
-
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 
 
 
@@ -1086,9 +656,6 @@ Acc w.r.t. [Sw, So, Sg, X0, X1, P, T]
 #### v.s. ECL
 
 
-
-
-    <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 
 
 
