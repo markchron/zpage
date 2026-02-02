@@ -89,7 +89,7 @@ python -m pip install pyvista
 
 In Jupyter Notebook, `pyvista.set_jupyter_backend("trame")` must install trame by `pip install trame trame-vtk trame-vuetify`
 
-![Output 1](/assets/images/benchmark_image_1.png)
+![png]({{ "/assets/images/benchmark_image_1.png" | relative_url }})
 
 ```
 [MacBook-Air.local:24992] shmem: mmap: an error occurred while determining whether or not /var/folders/zj/_m6vvrd158z_rx15qsbyk6c40000gn/T//ompi.MacBook-Air.501/jf.0/2692874240/sm_segment.MacBook-Air.501.a0820000.0 could be created.
@@ -300,11 +300,11 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 2](/assets/images/benchmark_image_2.png)
+![png]({{ "/assets/images/benchmark_image_2.png" | relative_url }})
 
-![Output 3](/assets/images/benchmark_image_3.png)
+![png]({{ "/assets/images/benchmark_image_3.png" | relative_url }})
 
-![Output 4](/assets/images/benchmark_image_4.png)
+![png]({{ "/assets/images/benchmark_image_4.png" | relative_url }})
 
 #### Block Temperature
 
@@ -312,11 +312,11 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 5](/assets/images/benchmark_image_5.png)
+![png]({{ "/assets/images/benchmark_image_5.png" | relative_url }})
 
-![Output 6](/assets/images/benchmark_image_6.png)
+![png]({{ "/assets/images/benchmark_image_6.png" | relative_url }})
 
-![Output 7](/assets/images/benchmark_image_7.png)
+![png]({{ "/assets/images/benchmark_image_7.png" | relative_url }})
 
 #### Block Saturation
 
@@ -324,21 +324,21 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 8](/assets/images/benchmark_image_8.png)
+![png]({{ "/assets/images/benchmark_image_8.png" | relative_url }})
 
-![Output 9](/assets/images/benchmark_image_9.png)
+![png]({{ "/assets/images/benchmark_image_9.png" | relative_url }})
 
-![Output 10](/assets/images/benchmark_image_10.png)
+![png]({{ "/assets/images/benchmark_image_10.png" | relative_url }})
 
 ```
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 11](/assets/images/benchmark_image_11.png)
+![png]({{ "/assets/images/benchmark_image_11.png" | relative_url }})
 
-![Output 12](/assets/images/benchmark_image_12.png)
+![png]({{ "/assets/images/benchmark_image_12.png" | relative_url }})
 
-![Output 13](/assets/images/benchmark_image_13.png)
+![png]({{ "/assets/images/benchmark_image_13.png" | relative_url }})
 
 ### vesus ECL
 
@@ -346,41 +346,41 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 14](/assets/images/benchmark_image_14.png)
+![png]({{ "/assets/images/benchmark_image_14.png" | relative_url }})
 
-![Output 15](/assets/images/benchmark_image_15.png)
+![png]({{ "/assets/images/benchmark_image_15.png" | relative_url }})
 
-![Output 16](/assets/images/benchmark_image_16.png)
-
-```
-<module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-```
-
-![Output 17](/assets/images/benchmark_image_17.png)
-
-![Output 18](/assets/images/benchmark_image_18.png)
-
-![Output 19](/assets/images/benchmark_image_19.png)
+![png]({{ "/assets/images/benchmark_image_16.png" | relative_url }})
 
 ```
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 20](/assets/images/benchmark_image_20.png)
+![png]({{ "/assets/images/benchmark_image_17.png" | relative_url }})
 
-![Output 21](/assets/images/benchmark_image_21.png)
+![png]({{ "/assets/images/benchmark_image_18.png" | relative_url }})
 
-![Output 22](/assets/images/benchmark_image_22.png)
+![png]({{ "/assets/images/benchmark_image_19.png" | relative_url }})
 
 ```
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 23](/assets/images/benchmark_image_23.png)
+![png]({{ "/assets/images/benchmark_image_20.png" | relative_url }})
 
-![Output 24](/assets/images/benchmark_image_24.png)
+![png]({{ "/assets/images/benchmark_image_21.png" | relative_url }})
 
-![Output 25](/assets/images/benchmark_image_25.png)
+![png]({{ "/assets/images/benchmark_image_22.png" | relative_url }})
+
+```
+<module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
+```
+
+![png]({{ "/assets/images/benchmark_image_23.png" | relative_url }})
+
+![png]({{ "/assets/images/benchmark_image_24.png" | relative_url }})
+
+![png]({{ "/assets/images/benchmark_image_25.png" | relative_url }})
 
 ### Well property
 
@@ -390,9 +390,9 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 26](/assets/images/benchmark_image_26.png)
+![png]({{ "/assets/images/benchmark_image_26.png" | relative_url }})
 
-![Output 27](/assets/images/benchmark_image_27.png)
+![png]({{ "/assets/images/benchmark_image_27.png" | relative_url }})
 
 #### Producer Corner
 
@@ -400,11 +400,11 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 28](/assets/images/benchmark_image_28.png)
+![png]({{ "/assets/images/benchmark_image_28.png" | relative_url }})
 
-![Output 29](/assets/images/benchmark_image_29.png)
+![png]({{ "/assets/images/benchmark_image_29.png" | relative_url }})
 
-![Output 30](/assets/images/benchmark_image_30.png)
+![png]({{ "/assets/images/benchmark_image_30.png" | relative_url }})
 
 #### Producer Edge
 
@@ -412,11 +412,11 @@ Select specific columns from the loaded DataFrames and plot them using matplotli
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 31](/assets/images/benchmark_image_31.png)
+![png]({{ "/assets/images/benchmark_image_31.png" | relative_url }})
 
-![Output 32](/assets/images/benchmark_image_32.png)
+![png]({{ "/assets/images/benchmark_image_32.png" | relative_url }})
 
-![Output 33](/assets/images/benchmark_image_33.png)
+![png]({{ "/assets/images/benchmark_image_33.png" | relative_url }})
 
 # Buckley- Leverett
 
@@ -557,9 +557,9 @@ TOTAL                                     2.636s
 
 ### Buckley Plot
 
-![Output 34](/assets/images/benchmark_image_34.png)
+![png]({{ "/assets/images/benchmark_image_34.png" | relative_url }})
 
-![Output 35](/assets/images/benchmark_image_35.png)
+![png]({{ "/assets/images/benchmark_image_35.png" | relative_url }})
 
 # MISC
 
@@ -797,15 +797,15 @@ TOTAL                                     4.664s
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 36](/assets/images/benchmark_image_36.png)
+![png]({{ "/assets/images/benchmark_image_36.png" | relative_url }})
 
-![Output 37](/assets/images/benchmark_image_37.png)
+![png]({{ "/assets/images/benchmark_image_37.png" | relative_url }})
 
-![Output 38](/assets/images/benchmark_image_38.png)
+![png]({{ "/assets/images/benchmark_image_38.png" | relative_url }})
 
-![Output 39](/assets/images/benchmark_image_39.png)
+![png]({{ "/assets/images/benchmark_image_39.png" | relative_url }})
 
-![Output 40](/assets/images/benchmark_image_40.png)
+![png]({{ "/assets/images/benchmark_image_40.png" | relative_url }})
 
 ```
 Widget(value='<iframe src="http://localhost:53331/index.html?ui=P_0x312d76de0_2&reconnect=auto" class="pyvista…
@@ -815,15 +815,15 @@ Widget(value='<iframe src="http://localhost:53331/index.html?ui=P_0x312d76de0_2&
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 41](/assets/images/benchmark_image_41.png)
+![png]({{ "/assets/images/benchmark_image_41.png" | relative_url }})
 
-![Output 42](/assets/images/benchmark_image_42.png)
+![png]({{ "/assets/images/benchmark_image_42.png" | relative_url }})
 
-![Output 43](/assets/images/benchmark_image_43.png)
+![png]({{ "/assets/images/benchmark_image_43.png" | relative_url }})
 
-![Output 44](/assets/images/benchmark_image_44.png)
+![png]({{ "/assets/images/benchmark_image_44.png" | relative_url }})
 
-![Output 45](/assets/images/benchmark_image_45.png)
+![png]({{ "/assets/images/benchmark_image_45.png" | relative_url }})
 
 ## stflu005.dat
 
@@ -907,27 +907,27 @@ TOTAL                                  1m 40.22s
 
 ### Wells
 
-![Output 46](/assets/images/benchmark_image_46.png)
+![png]({{ "/assets/images/benchmark_image_46.png" | relative_url }})
 
 ```
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 47](/assets/images/benchmark_image_47.png)
+![png]({{ "/assets/images/benchmark_image_47.png" | relative_url }})
 
-![Output 48](/assets/images/benchmark_image_48.png)
+![png]({{ "/assets/images/benchmark_image_48.png" | relative_url }})
 
-![Output 49](/assets/images/benchmark_image_49.png)
+![png]({{ "/assets/images/benchmark_image_49.png" | relative_url }})
 
 ```
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 50](/assets/images/benchmark_image_50.png)
+![png]({{ "/assets/images/benchmark_image_50.png" | relative_url }})
 
-![Output 51](/assets/images/benchmark_image_51.png)
+![png]({{ "/assets/images/benchmark_image_51.png" | relative_url }})
 
-![Output 52](/assets/images/benchmark_image_52.png)
+![png]({{ "/assets/images/benchmark_image_52.png" | relative_url }})
 
 ### Block
 
@@ -938,11 +938,11 @@ TOTAL                                  1m 40.22s
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 53](/assets/images/benchmark_image_53.png)
+![png]({{ "/assets/images/benchmark_image_53.png" | relative_url }})
 
-![Output 54](/assets/images/benchmark_image_54.png)
+![png]({{ "/assets/images/benchmark_image_54.png" | relative_url }})
 
-![Output 55](/assets/images/benchmark_image_55.png)
+![png]({{ "/assets/images/benchmark_image_55.png" | relative_url }})
 
 #### Block Temperature
 
@@ -950,31 +950,31 @@ TOTAL                                  1m 40.22s
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 56](/assets/images/benchmark_image_56.png)
+![png]({{ "/assets/images/benchmark_image_56.png" | relative_url }})
 
-![Output 57](/assets/images/benchmark_image_57.png)
+![png]({{ "/assets/images/benchmark_image_57.png" | relative_url }})
 
-![Output 58](/assets/images/benchmark_image_58.png)
-
-```
-<module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-```
-
-![Output 59](/assets/images/benchmark_image_59.png)
-
-![Output 60](/assets/images/benchmark_image_60.png)
-
-![Output 61](/assets/images/benchmark_image_61.png)
+![png]({{ "/assets/images/benchmark_image_58.png" | relative_url }})
 
 ```
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 62](/assets/images/benchmark_image_62.png)
+![png]({{ "/assets/images/benchmark_image_59.png" | relative_url }})
 
-![Output 63](/assets/images/benchmark_image_63.png)
+![png]({{ "/assets/images/benchmark_image_60.png" | relative_url }})
 
-![Output 64](/assets/images/benchmark_image_64.png)
+![png]({{ "/assets/images/benchmark_image_61.png" | relative_url }})
+
+```
+<module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
+```
+
+![png]({{ "/assets/images/benchmark_image_62.png" | relative_url }})
+
+![png]({{ "/assets/images/benchmark_image_63.png" | relative_url }})
+
+![png]({{ "/assets/images/benchmark_image_64.png" | relative_url }})
 
 #### v.s. ECL
 
@@ -982,8 +982,8 @@ TOTAL                                  1m 40.22s
 <module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
 ```
 
-![Output 65](/assets/images/benchmark_image_65.png)
+![png]({{ "/assets/images/benchmark_image_65.png" | relative_url }})
 
-![Output 66](/assets/images/benchmark_image_66.png)
+![png]({{ "/assets/images/benchmark_image_66.png" | relative_url }})
 
-![Output 67](/assets/images/benchmark_image_67.png)
+![png]({{ "/assets/images/benchmark_image_67.png" | relative_url }})
