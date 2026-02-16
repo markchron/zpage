@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Benchmark results of resrsim"
+title: "Benchmark results of simuapp"
 date: 2026-02-07
 ---
 

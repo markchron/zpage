@@ -1,11 +1,10 @@
 ---
 layout: default
-title: "Benchmark results of resrsim"
+title: "Benchmark results of eosapp"
 date: 2026-02-11
 ---
 
 # EOS Benchmark Test Suite
-
 
 
 This notebook runs all EOS test cases and generates comparison plots with benchmark data.
