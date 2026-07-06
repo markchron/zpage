@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Benchmark results of resrsim"
+title: "Benchmark results of eosapp"
 date: 2026-07-05
 ---
 
