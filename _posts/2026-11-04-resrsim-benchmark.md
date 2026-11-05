@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Benchmark results of resrsim"
-date: 2026-11-02
+date: 2026-11-04
 ---
 
 # Catfish benchmark
@@ -143,7 +143,7 @@ steam injection in corner-point grid
 ```
 Running simulation [simuapp]: Steam injection Corner point
 
-Elapsed: 0.60s
+Elapsed: 0.79s
 
     22  55.0000  1   3650.000    47.22              1.86              3.80                      30.05    0.000   39.381 4.29e-04    0.029
 
@@ -159,45 +159,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  0.224s  67.70%      
+Timeloop                                  0.231s  54.98%      
 
-|- Newton                                 0.202s  |- 90.01%   
+|- Newton                                 0.208s  |- 90.14%   
 
-  |- Update                               0.081s    |- 40.15% 
+  |- Update                               0.081s    |- 38.66% 
 
-  |- FluxJac                              0.051s    |- 25.37% 
+  |- FluxJac                              0.054s    |- 25.71% 
 
-  |- ScdAcc                               0.019s    |- 9.46%  
+  |- ScdAcc                               0.020s    |- 9.81%  
 
-  |- Solver                               0.014s    |- 6.98%  
+  |- Solver                               0.017s    |- 8.10%  
 
-  |- update_dev                           0.010s    |- 5.05%  
+  |- update_dev                           0.010s    |- 4.93%  
 
-  |- Precond                              0.010s    |- 5.04%  
+  |- Precond                              0.010s    |- 4.67%  
 
-  |- Residual                             0.005s    |- 2.57%  
+  |- Residual                             0.005s    |- 2.55%  
 
-  |- SanitizeJac                          0.002s    |- 0.97%  
+  |- alignvar                             0.001s    |- 0.66%  
 
-  |- alignvar                             0.001s    |- 0.67%  
+  |- PerfJac                              0.001s    |- 0.63%  
 
-  |- PerfJac                              0.001s    |- 0.64%  
+  |- SanitizeJac                          0.001s    |- 0.61%  
 
-  |- HeatLoss                             0.001s    |- 0.34%  
+  |- HeatLoss                             0.001s    |- 0.32%  
 
-|- Output                                 0.011s  |- 5.10%    
+|- Output                                 0.012s  |- 5.33%    
 
-|- Logging                                0.001s  |- 0.25%    
+|- Logging                                0.002s  |- 0.80%    
 
-|- Input                                  0.000s  |- 0.05%    
+|- Input                                  0.000s  |- 0.04%    
 
-Initialization                            0.107s  32.30%      
+Initialization                            0.189s  45.02%      
 
-|- execution                              0.099s  |- 92.71%   
+|- execution                              0.169s  |- 89.51%   
 
 ------------------------------------------------------------
 
-TOTAL                                     0.331s
+TOTAL                                     0.420s
 
 ============================================================
 
@@ -234,7 +234,7 @@ Load the SMY file (`spe04b.smy`) into a pandas DataFrame, ensuring proper parsin
 ```
 Running simulation [simuapp]: SPE4-b (-novtu)
 
-Elapsed: 1.40s
+Elapsed: 1.20s
 
     81  85.9779  6   3650.000     0.01              4.40             99.73                       4.59    0.119    1.494   0.0052    1.644
 
@@ -250,45 +250,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  1.122s  94.32%      
+Timeloop                                  0.969s  95.00%      
 
-|- Newton                                 1.094s  |- 97.55%   
+|- Newton                                 0.944s  |- 97.41%   
 
-  |- Update                               0.296s    |- 27.01% 
+  |- FluxJac                              0.238s    |- 25.17% 
 
-  |- FluxJac                              0.257s    |- 23.45% 
+  |- Update                               0.236s    |- 24.99% 
 
-  |- Solver                               0.145s    |- 13.29% 
+  |- Solver                               0.134s    |- 14.24% 
 
-  |- ScdAcc                               0.104s    |- 9.53%  
+  |- ScdAcc                               0.092s    |- 9.73%  
 
-  |- Precond                              0.091s    |- 8.35%  
+  |- Precond                              0.080s    |- 8.42%  
 
-  |- update_dev                           0.064s    |- 5.84%  
+  |- update_dev                           0.052s    |- 5.54%  
 
-  |- PerfJac                              0.042s    |- 3.80%  
+  |- PerfJac                              0.039s    |- 4.17%  
 
-  |- SanitizeJac                          0.027s    |- 2.51%  
+  |- SanitizeJac                          0.023s    |- 2.41%  
 
-  |- alignvar                             0.019s    |- 1.77%  
+  |- alignvar                             0.016s    |- 1.65%  
 
-  |- Residual                             0.008s    |- 0.77%  
+  |- Residual                             0.008s    |- 0.84%  
 
-  |- HeatLoss                             0.007s    |- 0.61%  
+  |- HeatLoss                             0.006s    |- 0.67%  
 
-|- Logging                                0.016s  |- 1.45%    
+|- Output                                 0.008s  |- 0.78%    
 
-|- Output                                 0.008s  |- 0.70%    
+|- Logging                                0.007s  |- 0.75%    
 
 |- Input                                  0.000s  |- 0.02%    
 
-Initialization                            0.068s  5.68%       
+Initialization                            0.051s  5.00%       
 
-|- execution                              0.065s  |- 95.93%   
+|- execution                              0.048s  |- 94.77%   
 
 ------------------------------------------------------------
 
-TOTAL                                     1.189s
+TOTAL                                     1.020s
 
 ============================================================
 
@@ -347,7 +347,7 @@ so the workaround is not needed to close the balance.
 ```
 Running simulation [simuapp]: Corner Grid (-novtu)
 
-Elapsed: 1.10s
+Elapsed: 1.00s
 
     46  27.5824  4   3650.000     0.06              3.71             98.42                       5.96    0.156   11.053   0.0307    0.829
 
@@ -363,45 +363,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  0.779s  92.46%      
+Timeloop                                  0.706s  92.02%      
 
-|- Newton                                 0.764s  |- 98.00%   
+|- Newton                                 0.691s  |- 97.90%   
 
-  |- Update                               0.193s    |- 25.25% 
+  |- Update                               0.176s    |- 25.53% 
 
-  |- FluxJac                              0.184s    |- 24.14% 
+  |- FluxJac                              0.162s    |- 23.44% 
 
-  |- Solver                               0.123s    |- 16.10% 
+  |- Solver                               0.117s    |- 16.94% 
 
-  |- ScdAcc                               0.070s    |- 9.21%  
+  |- ScdAcc                               0.063s    |- 9.09%  
 
-  |- Precond                              0.063s    |- 8.20%  
+  |- Precond                              0.057s    |- 8.20%  
 
-  |- update_dev                           0.043s    |- 5.57%  
+  |- update_dev                           0.035s    |- 5.06%  
 
-  |- PerfJac                              0.030s    |- 3.89%  
+  |- PerfJac                              0.029s    |- 4.18%  
 
-  |- SanitizeJac                          0.018s    |- 2.34%  
+  |- SanitizeJac                          0.016s    |- 2.29%  
 
-  |- alignvar                             0.013s    |- 1.69%  
+  |- alignvar                             0.012s    |- 1.67%  
 
-  |- Residual                             0.006s    |- 0.85%  
+  |- Residual                             0.006s    |- 0.88%  
 
-  |- HeatLoss                             0.005s    |- 0.70%  
+  |- HeatLoss                             0.005s    |- 0.74%  
 
-|- Logging                                0.006s  |- 0.83%    
+|- Logging                                0.004s  |- 0.61%    
 
-|- Output                                 0.004s  |- 0.56%    
+|- Output                                 0.004s  |- 0.59%    
 
 |- Input                                  0.000s  |- 0.02%    
 
-Initialization                            0.064s  7.54%       
+Initialization                            0.061s  7.98%       
 
-|- execution                              0.060s  |- 94.78%   
+|- execution                              0.058s  |- 95.19%   
 
 ------------------------------------------------------------
 
-TOTAL                                     0.843s
+TOTAL                                     0.767s
 
 ============================================================
 
@@ -428,7 +428,7 @@ Acc w.r.t. [Sw, So, Sg, X0, X1, P, T]
 ```
 Running simulation [simuapp]: Buckley-Leverett (-novtu)
 
-Elapsed: 0.83s
+Elapsed: 0.82s
 
     79   4.0256  1     10.000    2e-10              0.16            100.00                       0.16   13.238    0.002 2.86e-06  1.8e-07
 
@@ -444,45 +444,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  0.569s  90.64%      
+Timeloop                                  0.567s  89.99%      
 
-|- Newton                                 0.553s  |- 97.31%   
+|- Newton                                 0.552s  |- 97.36%   
 
-  |- Update                               0.187s    |- 33.75% 
+  |- Update                               0.186s    |- 33.61% 
 
-  |- FluxJac                              0.082s    |- 14.90% 
+  |- FluxJac                              0.084s    |- 15.15% 
 
-  |- ScdAcc                               0.072s    |- 13.02% 
+  |- ScdAcc                               0.071s    |- 12.81% 
 
-  |- Precond                              0.064s    |- 11.57% 
+  |- Precond                              0.065s    |- 11.85% 
 
-  |- update_dev                           0.035s    |- 6.25%  
+  |- update_dev                           0.036s    |- 6.47%  
 
-  |- PerfJac                              0.030s    |- 5.39%  
+  |- PerfJac                              0.030s    |- 5.42%  
 
-  |- SanitizeJac                          0.021s    |- 3.78%  
+  |- SanitizeJac                          0.020s    |- 3.63%  
 
-  |- Solver                               0.015s    |- 2.67%  
+  |- Solver                               0.015s    |- 2.73%  
 
-  |- alignvar                             0.014s    |- 2.58%  
+  |- alignvar                             0.015s    |- 2.68%  
 
-  |- HeatLoss                             0.011s    |- 1.95%  
+  |- HeatLoss                             0.011s    |- 1.94%  
 
-  |- Residual                             0.007s    |- 1.29%  
+  |- Residual                             0.007s    |- 1.27%  
 
-|- Logging                                0.006s  |- 1.14%    
+|- Logging                                0.004s  |- 0.75%    
 
-|- Output                                 0.004s  |- 0.72%    
+|- Output                                 0.004s  |- 0.73%    
 
 |- Input                                  0.000s  |- 0.02%    
 
-Initialization                            0.059s  9.36%       
+Initialization                            0.063s  10.01%      
 
-|- execution                              0.056s  |- 95.99%   
+|- execution                              0.060s  |- 95.69%   
 
 ------------------------------------------------------------
 
-TOTAL                                     0.627s
+TOTAL                                     0.630s
 
 ============================================================
 
@@ -497,8 +497,6 @@ Time steps : 79/81, step size: 0.126582, 0.601838
 ### Buckley Plot
 
 ![png]({{ "/assets/images/benchmark_image_7.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_8.png" | relative_url }})
 
 # Lauwerier problem
 
@@ -527,7 +525,7 @@ producer, and the smoother post-breakthrough regime.
 ```
 Running simulation [simuapp]: Lauwerier thin-layer thermal front
 
-Elapsed: 0.82s
+Elapsed: 0.83s
 
 
 
@@ -543,45 +541,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  0.572s  90.52%      
+Timeloop                                  0.586s  90.38%      
 
-|- Newton                                 0.557s  |- 97.33%   
+|- Newton                                 0.567s  |- 96.90%   
 
-  |- Update                               0.230s    |- 41.23% 
+  |- Update                               0.235s    |- 41.47% 
 
-  |- FluxJac                              0.115s    |- 20.70% 
+  |- FluxJac                              0.120s    |- 21.23% 
 
-  |- ScdAcc                               0.063s    |- 11.24% 
+  |- ScdAcc                               0.066s    |- 11.55% 
 
-  |- update_dev                           0.039s    |- 7.05%  
+  |- update_dev                           0.035s    |- 6.13%  
 
-  |- Precond                              0.034s    |- 6.05%  
+  |- Precond                              0.034s    |- 5.94%  
 
-  |- HeatLoss                             0.016s    |- 2.88%  
+  |- HeatLoss                             0.016s    |- 2.90%  
 
-  |- Solver                               0.014s    |- 2.55%  
+  |- Solver                               0.015s    |- 2.57%  
 
-  |- Residual                             0.012s    |- 2.19%  
+  |- Residual                             0.012s    |- 2.17%  
 
-  |- PerfJac                              0.008s    |- 1.45%  
+  |- PerfJac                              0.008s    |- 1.46%  
 
-  |- SanitizeJac                          0.007s    |- 1.23%  
+  |- SanitizeJac                          0.007s    |- 1.19%  
 
-  |- alignvar                             0.005s    |- 0.97%  
+  |- alignvar                             0.005s    |- 0.92%  
 
-|- Output                                 0.010s  |- 1.67%    
+|- Output                                 0.012s  |- 2.01%    
 
-|- Logging                                0.001s  |- 0.23%    
+|- Logging                                0.002s  |- 0.32%    
 
 |- Input                                  0.000s  |- 0.01%    
 
-Initialization                            0.060s  9.48%       
+Initialization                            0.062s  9.62%       
 
-|- execution                              0.058s  |- 96.35%   
+|- execution                              0.060s  |- 96.37%   
 
 ------------------------------------------------------------
 
-TOTAL                                     0.632s
+TOTAL                                     0.648s
 
 ============================================================
 
@@ -611,7 +609,7 @@ Analytic front speed: 729.1 ft/day, breakthrough at 13.8 days (804 cells)
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_9.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_8.png" | relative_url }})
 
 The relative error is largest, and concentrated right at the advancing front, for the snapshots
 
@@ -623,7 +621,7 @@ breakthrough (t >~ 32 days) the profile is governed by the smoother post-breakth
 
 and the relative L2 error over the whole 804-cell row drops accordingly.
 
-![png]({{ "/assets/images/benchmark_image_10.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_9.png" | relative_url }})
 
 # Avdonin problem
 
@@ -701,7 +699,7 @@ Two bugs in the deck had to be fixed before this comparison meant anything, both
 ```
 Running simulation [simuapp]: Avdonin radial thermal front
 
-Elapsed: 0.31s
+Elapsed: 0.30s
 
     17   1.4144  2     10.000                                                                 9521.20    0.053  152.652             1.045
 
@@ -717,45 +715,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Initialization                            0.083s  64.31%      
+Initialization                            0.059s  52.89%      
 
-|- execution                              0.081s  |- 97.29%   
+|- execution                              0.057s  |- 96.39%   
 
-Timeloop                                  0.046s  35.69%      
+Timeloop                                  0.053s  47.11%      
 
-|- Newton                                 0.042s  |- 90.53%   
+|- Newton                                 0.047s  |- 89.89%   
 
-  |- Update                               0.014s    |- 33.08% 
+  |- Update                               0.016s    |- 32.85% 
 
-  |- Precond                              0.006s    |- 15.33% 
+  |- Precond                              0.008s    |- 16.54% 
 
-  |- PerfJac                              0.005s    |- 11.82% 
+  |- PerfJac                              0.005s    |- 10.65% 
 
-  |- FluxJac                              0.004s    |- 9.96%  
+  |- FluxJac                              0.005s    |- 9.93%  
 
-  |- ScdAcc                               0.004s    |- 9.74%  
+  |- ScdAcc                               0.005s    |- 9.73%  
 
-  |- update_dev                           0.002s    |- 5.88%  
+  |- SanitizeJac                          0.003s    |- 5.94%  
 
-  |- SanitizeJac                          0.002s    |- 5.68%  
+  |- update_dev                           0.003s    |- 5.54%  
 
-  |- alignvar                             0.001s    |- 3.18%  
+  |- alignvar                             0.002s    |- 3.44%  
 
-  |- Solver                               0.001s    |- 2.57%  
+  |- Solver                               0.001s    |- 2.64%  
 
-  |- Residual                             0.000s    |- 0.43%  
+  |- Residual                             0.000s    |- 0.38%  
 
   |- HeatLoss                             0.000s    |- 0.01%  
 
-|- Output                                 0.003s  |- 6.18%    
+|- Output                                 0.004s  |- 6.71%    
 
-|- Logging                                0.001s  |- 1.44%    
+|- Logging                                0.001s  |- 1.43%    
 
-|- Input                                  0.000s  |- 0.07%    
+|- Input                                  0.000s  |- 0.10%    
 
 ------------------------------------------------------------
 
-TOTAL                                     0.129s
+TOTAL                                     0.112s
 
 ============================================================
 
@@ -785,7 +783,7 @@ D=6.088e-06 m2/s, nu=17.26
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_11.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_10.png" | relative_url }})
 
 The mismatch is concentrated at the advancing front and shrinks as cells fully equilibrate - the
 
@@ -800,7 +798,7 @@ target (the analytic solution assumes that full rate from t=0), compounded by th
 15-block grid - only the first 3-4 blocks sit inside the thermal front by day 10.
 
 
-![png]({{ "/assets/images/benchmark_image_12.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_11.png" | relative_url }})
 
 # MISC
 
@@ -809,7 +807,7 @@ target (the analytic solution assumes that full rate from t=0), compounded by th
 ```
 Running simulation [simuapp]: SPE4-b water flooding (-novtu)
 
-Elapsed: 0.59s
+Elapsed: 0.61s
 
     22 163.2235  2   3650.000     0.78             10.19             92.87                      10.73    0.001   13.707   0.0098    0.002
 
@@ -825,45 +823,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  0.356s  86.17%      
+Timeloop                                  0.369s  86.37%      
 
-|- Newton                                 0.351s  |- 98.49%   
+|- Newton                                 0.364s  |- 98.56%   
 
-  |- Update                               0.115s    |- 32.78% 
+  |- Update                               0.115s    |- 31.65% 
 
-  |- FluxJac                              0.102s    |- 29.04% 
+  |- FluxJac                              0.114s    |- 31.42% 
 
-  |- Solver                               0.035s    |- 9.95%  
+  |- Solver                               0.035s    |- 9.66%  
 
-  |- ScdAcc                               0.032s    |- 9.20%  
+  |- ScdAcc                               0.033s    |- 9.14%  
 
-  |- Precond                              0.023s    |- 6.69%  
+  |- Precond                              0.023s    |- 6.34%  
 
-  |- update_dev                           0.018s    |- 5.17%  
+  |- update_dev                           0.018s    |- 4.89%  
 
-  |- PerfJac                              0.007s    |- 1.88%  
+  |- PerfJac                              0.007s    |- 1.80%  
 
-  |- SanitizeJac                          0.005s    |- 1.46%  
+  |- SanitizeJac                          0.005s    |- 1.39%  
 
-  |- Residual                             0.004s    |- 1.22%  
+  |- Residual                             0.004s    |- 1.19%  
 
-  |- alignvar                             0.004s    |- 1.12%  
+  |- alignvar                             0.004s    |- 1.06%  
 
   |- HeatLoss                             0.000s    |- 0.00%  
 
-|- Output                                 0.001s  |- 0.39%    
+|- Output                                 0.001s  |- 0.37%    
 
-|- Logging                                0.001s  |- 0.30%    
+|- Logging                                0.001s  |- 0.31%    
 
 |- Input                                  0.000s  |- 0.02%    
 
-Initialization                            0.057s  13.83%      
+Initialization                            0.058s  13.63%      
 
-|- execution                              0.055s  |- 95.99%   
+|- execution                              0.056s  |- 95.74%   
 
 ------------------------------------------------------------
 
-TOTAL                                     0.413s
+TOTAL                                     0.427s
 
 ============================================================
 
@@ -880,7 +878,7 @@ Time steps : 22/22, step size: 165.909, 155.033
 ```
 Running simulation [simuapp]: SPE4-b Water flooding without vmod (-novtu)
 
-Elapsed: 0.77s
+Elapsed: 0.89s
 
     35  32.9891  2   3650.000     1.04             79.00             98.70                      80.00    0.000    1.899   0.0029  3.2e-04
 
@@ -896,45 +894,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  0.536s  90.27%      
+Timeloop                                  0.637s  91.13%      
 
-|- Newton                                 0.525s  |- 97.94%   
+|- Newton                                 0.624s  |- 97.98%   
 
-  |- Update                               0.168s    |- 32.08% 
+  |- Update                               0.191s    |- 30.64% 
 
-  |- FluxJac                              0.143s    |- 27.17% 
+  |- FluxJac                              0.185s    |- 29.67% 
 
-  |- Solver                               0.059s    |- 11.15% 
+  |- Solver                               0.063s    |- 10.10% 
 
-  |- ScdAcc                               0.043s    |- 8.26%  
+  |- ScdAcc                               0.053s    |- 8.46%  
 
-  |- Precond                              0.032s    |- 6.16%  
+  |- PerfJac                              0.036s    |- 5.81%  
 
-  |- PerfJac                              0.031s    |- 5.95%  
+  |- Precond                              0.033s    |- 5.28%  
 
-  |- update_dev                           0.022s    |- 4.18%  
+  |- update_dev                           0.030s    |- 4.80%  
 
-  |- SanitizeJac                          0.007s    |- 1.40%  
+  |- SanitizeJac                          0.009s    |- 1.50%  
 
-  |- Residual                             0.006s    |- 1.20%  
+  |- alignvar                             0.007s    |- 1.09%  
 
-  |- alignvar                             0.005s    |- 1.04%  
+  |- Residual                             0.006s    |- 1.03%  
 
   |- HeatLoss                             0.000s    |- 0.00%  
 
-|- Output                                 0.003s  |- 0.56%    
+|- Output                                 0.004s  |- 0.63%    
 
-|- Logging                                0.001s  |- 0.28%    
+|- Logging                                0.004s  |- 0.56%    
 
 |- Input                                  0.000s  |- 0.02%    
 
-Initialization                            0.058s  9.73%       
+Initialization                            0.062s  8.87%       
 
-|- execution                              0.055s  |- 95.89%   
+|- execution                              0.060s  |- 96.46%   
 
 ------------------------------------------------------------
 
-TOTAL                                     0.594s
+TOTAL                                     0.699s
 
 ============================================================
 
@@ -952,7 +950,7 @@ Inverted 9 spot hot water flooding with area/block modifier, 5 point transmissib
 ```
 Running simulation [simuapp]: Inverted 9 spot hot water flooding (-novtu)
 
-Elapsed: 1.09s
+Elapsed: 1.17s
 
     93 352.2655  2   3650.000    2e-04            597.42            100.00                     597.42    0.272    0.396 3.40e-04    0.010
 
@@ -968,45 +966,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  0.858s  93.52%      
+Timeloop                                  0.936s  94.37%      
 
-|- Newton                                 0.839s  |- 97.72%   
+|- Newton                                 0.912s  |- 97.45%   
 
-  |- Update                               0.259s    |- 30.87% 
+  |- Update                               0.269s    |- 29.49% 
 
-  |- FluxJac                              0.221s    |- 26.40% 
+  |- FluxJac                              0.245s    |- 26.89% 
 
-  |- ScdAcc                               0.089s    |- 10.56% 
+  |- ScdAcc                               0.093s    |- 10.16% 
 
-  |- Precond                              0.079s    |- 9.43%  
+  |- Precond                              0.082s    |- 8.97%  
 
-  |- update_dev                           0.055s    |- 6.60%  
+  |- update_dev                           0.056s    |- 6.17%  
 
-  |- Solver                               0.045s    |- 5.39%  
+  |- Solver                               0.050s    |- 5.45%  
 
-  |- SanitizeJac                          0.022s    |- 2.63%  
+  |- alignvar                             0.034s    |- 3.77%  
 
-  |- alignvar                             0.017s    |- 1.97%  
+  |- SanitizeJac                          0.023s    |- 2.52%  
 
-  |- PerfJac                              0.015s    |- 1.85%  
+  |- PerfJac                              0.015s    |- 1.67%  
 
-  |- Residual                             0.009s    |- 1.10%  
+  |- Residual                             0.009s    |- 0.94%  
 
-  |- HeatLoss                             0.007s    |- 0.81%  
+  |- HeatLoss                             0.007s    |- 0.77%  
 
-|- Logging                                0.010s  |- 1.11%    
+|- Output                                 0.010s  |- 1.02%    
 
-|- Output                                 0.007s  |- 0.87%    
+|- Logging                                0.008s  |- 0.81%    
 
 |- Input                                  0.000s  |- 0.02%    
 
-Initialization                            0.059s  6.48%       
+Initialization                            0.056s  5.63%       
 
-|- execution                              0.057s  |- 95.77%   
+|- execution                              0.053s  |- 95.38%   
 
 ------------------------------------------------------------
 
-TOTAL                                     0.918s
+TOTAL                                     0.992s
 
 ============================================================
 
@@ -1020,7 +1018,7 @@ Time steps : 93/94, step size: 39.2473, 94.8079
 
 * One row per block: pressure, temperature, oil saturation, gas saturation, CMG against OURS.
 
-![png]({{ "/assets/images/benchmark_image_13.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_12.png" | relative_url }})
 
 ## stflu002.dat
 
@@ -1045,45 +1043,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  0.309s  84.59%      
+Timeloop                                  0.294s  82.94%      
 
-|- Newton                                 0.300s  |- 96.94%   
+|- Newton                                 0.285s  |- 96.79%   
 
-  |- Update                               0.085s    |- 28.33% 
+  |- Update                               0.080s    |- 28.11% 
 
-  |- FluxJac                              0.060s    |- 19.99% 
+  |- FluxJac                              0.055s    |- 19.19% 
 
-  |- Solver                               0.049s    |- 16.28% 
+  |- Solver                               0.049s    |- 17.32% 
 
-  |- ScdAcc                               0.028s    |- 9.46%  
+  |- ScdAcc                               0.026s    |- 9.24%  
 
-  |- Precond                              0.027s    |- 8.90%  
+  |- Precond                              0.025s    |- 8.65%  
 
-  |- update_dev                           0.013s    |- 4.20%  
+  |- update_dev                           0.012s    |- 4.36%  
 
-  |- PerfJac                              0.012s    |- 3.94%  
+  |- PerfJac                              0.012s    |- 4.26%  
 
-  |- SanitizeJac                          0.008s    |- 2.65%  
+  |- SanitizeJac                          0.007s    |- 2.55%  
 
-  |- alignvar                             0.005s    |- 1.74%  
+  |- alignvar                             0.005s    |- 1.71%  
 
-  |- HeatLoss                             0.004s    |- 1.46%  
+  |- HeatLoss                             0.004s    |- 1.49%  
 
-  |- Residual                             0.003s    |- 1.10%  
+  |- Residual                             0.003s    |- 1.13%  
 
-|- Output                                 0.002s  |- 0.77%    
+|- Output                                 0.002s  |- 0.83%    
 
-|- Logging                                0.002s  |- 0.64%    
+|- Logging                                0.002s  |- 0.69%    
 
-|- Input                                  0.000s  |- 0.03%    
+|- Input                                  0.000s  |- 0.04%    
 
-Initialization                            0.056s  15.41%      
+Initialization                            0.061s  17.06%      
 
-|- execution                              0.054s  |- 95.85%   
+|- execution                              0.058s  |- 96.03%   
 
 ------------------------------------------------------------
 
-TOTAL                                     0.365s
+TOTAL                                     0.355s
 
 ============================================================
 
@@ -1102,7 +1100,7 @@ Time steps : 50/50, step size: 73, 129.7
 ```
 Running simulation [simuapp]: uniformed corner grid (-novtu)
 
-Elapsed: 0.51s
+Elapsed: 0.54s
 
     46 309.2362  6   3650.000   620.28             11.15              1.77                     635.95    0.000  1.1e+03   0.0466    0.035
 
@@ -1118,45 +1116,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  0.282s  83.22%      
+Timeloop                                  0.289s  81.54%      
 
-|- Newton                                 0.273s  |- 96.86%   
+|- Newton                                 0.279s  |- 96.62%   
 
-  |- Update                               0.078s    |- 28.60% 
+  |- Update                               0.079s    |- 28.20% 
 
-  |- FluxJac                              0.052s    |- 18.97% 
+  |- FluxJac                              0.052s    |- 18.75% 
 
-  |- Solver                               0.046s    |- 16.82% 
+  |- Solver                               0.048s    |- 17.09% 
 
-  |- ScdAcc                               0.025s    |- 9.29%  
+  |- ScdAcc                               0.026s    |- 9.20%  
 
-  |- Precond                              0.024s    |- 8.62%  
+  |- Precond                              0.023s    |- 8.37%  
 
-  |- update_dev                           0.014s    |- 5.07%  
+  |- update_dev                           0.014s    |- 5.01%  
 
-  |- PerfJac                              0.011s    |- 3.93%  
+  |- PerfJac                              0.011s    |- 4.01%  
 
-  |- SanitizeJac                          0.007s    |- 2.58%  
+  |- SanitizeJac                          0.008s    |- 2.79%  
 
-  |- alignvar                             0.005s    |- 1.76%  
+  |- alignvar                             0.005s    |- 1.83%  
 
   |- HeatLoss                             0.004s    |- 1.36%  
 
-  |- Residual                             0.003s    |- 1.04%  
+  |- Residual                             0.003s    |- 1.07%  
 
-|- Output                                 0.002s  |- 0.81%    
+|- Logging                                0.003s  |- 0.93%    
 
-|- Logging                                0.002s  |- 0.66%    
+|- Output                                 0.003s  |- 0.92%    
 
 |- Input                                  0.000s  |- 0.03%    
 
-Initialization                            0.057s  16.78%      
+Initialization                            0.065s  18.46%      
 
-|- execution                              0.054s  |- 95.32%   
+|- execution                              0.063s  |- 95.84%   
 
 ------------------------------------------------------------
 
-TOTAL                                     0.339s
+TOTAL                                     0.354s
 
 ============================================================
 
@@ -1166,19 +1164,7 @@ Time steps : 46/46, step size: 79.3478, 131.806
 
 ```
 
-```
-<module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-```
-
-![png]({{ "/assets/images/benchmark_image_14.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_15.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_16.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_17.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_18.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_13.png" | relative_url }})
 
 
 
@@ -1190,7 +1176,7 @@ Time steps : 46/46, step size: 79.3478, 131.806
 ```
 Running simulation [simuapp]: 2D diagonal flow: grid orientation
 
-Elapsed: 0.88s
+Elapsed: 0.87s
 
     62  69.9920  5   3650.000   611.68             21.53              3.40                     635.95    0.000  934.482   0.0235    0.054
 
@@ -1206,45 +1192,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  0.620s  91.71%      
+Timeloop                                  0.626s  91.50%      
 
-|- Newton                                 0.598s  |- 96.53%   
+|- Newton                                 0.599s  |- 95.78%   
 
-  |- Update                               0.222s    |- 37.04% 
+  |- Update                               0.216s    |- 36.01% 
 
-  |- FluxJac                              0.132s    |- 22.05% 
+  |- FluxJac                              0.132s    |- 21.97% 
 
-  |- Solver                               0.087s    |- 14.61% 
+  |- Solver                               0.089s    |- 14.89% 
 
-  |- ScdAcc                               0.050s    |- 8.33%  
+  |- ScdAcc                               0.048s    |- 7.98%  
 
-  |- Precond                              0.032s    |- 5.35%  
+  |- Precond                              0.033s    |- 5.44%  
 
-  |- update_dev                           0.024s    |- 3.93%  
+  |- update_dev                           0.026s    |- 4.42%  
 
-  |- PerfJac                              0.014s    |- 2.26%  
+  |- PerfJac                              0.014s    |- 2.30%  
 
-  |- HeatLoss                             0.008s    |- 1.42%  
+  |- HeatLoss                             0.009s    |- 1.46%  
 
-  |- SanitizeJac                          0.008s    |- 1.28%  
+  |- SanitizeJac                          0.008s    |- 1.29%  
 
-  |- Residual                             0.006s    |- 1.08%  
+  |- Residual                             0.007s    |- 1.15%  
 
-  |- alignvar                             0.006s    |- 0.93%  
+  |- alignvar                             0.006s    |- 0.94%  
 
-|- Output                                 0.014s  |- 2.20%    
+|- Output                                 0.018s  |- 2.83%    
 
-|- Logging                                0.002s  |- 0.35%    
+|- Logging                                0.004s  |- 0.69%    
 
 |- Input                                  0.000s  |- 0.02%    
 
-Initialization                            0.056s  8.29%       
+Initialization                            0.058s  8.50%       
 
-|- execution                              0.053s  |- 95.17%   
+|- execution                              0.056s  |- 95.88%   
 
 ------------------------------------------------------------
 
-TOTAL                                     0.676s
+TOTAL                                     0.684s
 
 ============================================================
 
@@ -1254,21 +1240,9 @@ Time steps : 62/62, step size: 58.871, 77.9274
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_19.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_14.png" | relative_url }})
 
-```
-<module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-```
-
-![png]({{ "/assets/images/benchmark_image_20.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_21.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_22.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_23.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_24.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_15.png" | relative_url }})
 
 ## stflu007.dat
 
@@ -1278,7 +1252,7 @@ PEBI_GRID
 ```
 Running simulation [simuapp]: 2D diagonal flow: pebi grid
 
-Elapsed: 1.95s
+Elapsed: 2.51s
 
     60  27.3410  4   3650.000   623.17             12.31              1.94                     635.95    0.000   94.134   0.0056    0.003
 
@@ -1294,45 +1268,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  1.683s  95.98%      
+Timeloop                                  2.169s  95.59%      
 
-|- Newton                                 1.653s  |- 98.17%   
+|- Newton                                 2.124s  |- 97.94%   
 
-  |- Solver                               0.638s    |- 38.60% 
+  |- Solver                               0.824s    |- 38.81% 
 
-  |- FluxJac                              0.367s    |- 22.19% 
+  |- FluxJac                              0.501s    |- 23.60% 
 
-  |- Update                               0.345s    |- 20.89% 
+  |- Update                               0.419s    |- 19.74% 
 
-  |- ScdAcc                               0.094s    |- 5.71%  
+  |- ScdAcc                               0.132s    |- 6.20%  
 
-  |- update_dev                           0.065s    |- 3.90%  
+  |- Precond                              0.067s    |- 3.16%  
 
-  |- Precond                              0.059s    |- 3.55%  
+  |- update_dev                           0.065s    |- 3.08%  
 
-  |- HeatLoss                             0.017s    |- 1.05%  
+  |- HeatLoss                             0.020s    |- 0.94%  
 
-  |- SanitizeJac                          0.014s    |- 0.82%  
+  |- PerfJac                              0.018s    |- 0.83%  
 
-  |- PerfJac                              0.014s    |- 0.82%  
+  |- SanitizeJac                          0.016s    |- 0.74%  
 
-  |- Residual                             0.013s    |- 0.80%  
+  |- Residual                             0.016s    |- 0.73%  
 
-  |- alignvar                             0.010s    |- 0.58%  
+  |- alignvar                             0.012s    |- 0.55%  
 
-|- Output                                 0.020s  |- 1.18%    
+|- Output                                 0.030s  |- 1.40%    
 
-|- Logging                                0.004s  |- 0.23%    
+|- Logging                                0.015s  |- 0.71%    
 
 |- Input                                  0.000s  |- 0.01%    
 
-Initialization                            0.071s  4.02%       
+Initialization                            0.100s  4.41%       
 
-|- execution                              0.062s  |- 87.47%   
+|- execution                              0.085s  |- 85.25%   
 
 ------------------------------------------------------------
 
-TOTAL                                     1.754s
+TOTAL                                     2.268s
 
 ============================================================
 
@@ -1342,19 +1316,9 @@ Time steps : 60/60, step size: 60.8333, 117.512
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_25.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_16.png" | relative_url }})
 
-```
-<module 'matplotlib.pyplot' from '/Users/mark/Documents/workspace/hatch/app/.venv/lib/python3.12/site-packages/matplotlib/pyplot.py'>
-```
-
-![png]({{ "/assets/images/benchmark_image_26.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_27.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_28.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_29.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_17.png" | relative_url }})
 
 ## stflu026.dat
 
@@ -1363,7 +1327,7 @@ Time steps : 60/60, step size: 60.8333, 117.512
 ```
 Running simulation [simuapp]: 3 component steam flooding (-novtu)
 
-Elapsed: 1.65s
+Elapsed: 2.07s
 
     92 270.2547  6   3650.000     0.01              3.97             99.85                       4.33    4.521   36.033   0.0806    4.475
 
@@ -1379,45 +1343,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  1.374s  96.05%      
+Timeloop                                  1.713s  94.49%      
 
-|- Newton                                 1.345s  |- 97.93%   
+|- Newton                                 1.675s  |- 97.77%   
 
-  |- FluxJac                              0.333s    |- 24.74% 
+  |- FluxJac                              0.389s    |- 23.24% 
 
-  |- Update                               0.303s    |- 22.52% 
+  |- Update                               0.368s    |- 21.98% 
 
-  |- Solver                               0.282s    |- 20.99% 
+  |- Solver                               0.366s    |- 21.86% 
 
-  |- ScdAcc                               0.119s    |- 8.81%  
+  |- ScdAcc                               0.175s    |- 10.44% 
 
-  |- Precond                              0.103s    |- 7.67%  
+  |- Precond                              0.111s    |- 6.60%  
 
-  |- update_dev                           0.068s    |- 5.06%  
+  |- update_dev                           0.086s    |- 5.12%  
 
-  |- PerfJac                              0.048s    |- 3.54%  
+  |- PerfJac                              0.055s    |- 3.28%  
 
-  |- SanitizeJac                          0.027s    |- 2.04%  
+  |- SanitizeJac                          0.035s    |- 2.08%  
 
-  |- alignvar                             0.018s    |- 1.35%  
+  |- alignvar                             0.023s    |- 1.35%  
 
-  |- Residual                             0.009s    |- 0.70%  
+  |- Residual                             0.010s    |- 0.60%  
 
-  |- HeatLoss                             0.009s    |- 0.65%  
+  |- HeatLoss                             0.009s    |- 0.55%  
 
-|- Logging                                0.010s  |- 0.75%    
+|- Logging                                0.027s  |- 1.55%    
 
-|- Output                                 0.009s  |- 0.63%    
+|- Output                                 0.012s  |- 0.72%    
 
-|- Input                                  0.000s  |- 0.01%    
+|- Input                                  0.000s  |- 0.02%    
 
-Initialization                            0.056s  3.95%       
+Initialization                            0.100s  5.51%       
 
-|- execution                              0.054s  |- 95.05%   
+|- execution                              0.095s  |- 95.45%   
 
 ------------------------------------------------------------
 
-TOTAL                                     1.430s
+TOTAL                                     1.813s
 
 ============================================================
 
@@ -1442,13 +1406,13 @@ OURS reached day 3650.0 of 3650
 
 * One row per well: bottom-hole pressure, water rate, oil rate (producers only).
 
-![png]({{ "/assets/images/benchmark_image_30.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_18.png" | relative_url }})
 
 ### Blocks
 
 * One row per block: pressure, temperature, oil saturation, gas saturation. (5,4,1) has no ECL curve.
 
-![png]({{ "/assets/images/benchmark_image_31.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_19.png" | relative_url }})
 
 # SPE4C
 
@@ -1462,7 +1426,7 @@ OURS reached day 3650.0 of 3650
 ```
 Running simulation [simuapp]: SPE4-C benchmark on live oil (-novtu)
 
-Elapsed: 2.21s
+Elapsed: 2.14s
 
     95 277.9459  9   3650.000     0.01              4.16             99.86                       4.21    0.875   10.158   0.0125    5.543
 
@@ -1478,45 +1442,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  1.887s  96.53%      
+Timeloop                                  1.887s  96.68%      
 
-|- Newton                                 1.854s  |- 98.26%   
+|- Newton                                 1.856s  |- 98.39%   
 
-  |- Solver                               0.481s    |- 25.92% 
+  |- Solver                               0.480s    |- 25.86% 
 
-  |- FluxJac                              0.446s    |- 24.07% 
+  |- FluxJac                              0.467s    |- 25.13% 
 
-  |- Update                               0.375s    |- 20.25% 
+  |- Update                               0.353s    |- 19.00% 
 
-  |- ScdAcc                               0.156s    |- 8.40%  
+  |- ScdAcc                               0.157s    |- 8.48%  
 
-  |- Precond                              0.146s    |- 7.86%  
+  |- Precond                              0.146s    |- 7.85%  
 
-  |- update_dev                           0.085s    |- 4.59%  
+  |- update_dev                           0.083s    |- 4.47%  
 
-  |- PerfJac                              0.060s    |- 3.22%  
+  |- PerfJac                              0.059s    |- 3.18%  
 
-  |- SanitizeJac                          0.031s    |- 1.67%  
+  |- SanitizeJac                          0.043s    |- 2.34%  
 
-  |- alignvar                             0.021s    |- 1.15%  
+  |- alignvar                             0.021s    |- 1.12%  
 
-  |- Residual                             0.012s    |- 0.62%  
+  |- Residual                             0.011s    |- 0.59%  
 
-  |- HeatLoss                             0.011s    |- 0.60%  
+  |- HeatLoss                             0.011s    |- 0.58%  
 
-|- Logging                                0.012s  |- 0.66%    
+|- Output                                 0.010s  |- 0.54%    
 
-|- Output                                 0.011s  |- 0.60%    
+|- Logging                                0.008s  |- 0.43%    
 
 |- Input                                  0.000s  |- 0.01%    
 
-Initialization                            0.068s  3.47%       
+Initialization                            0.065s  3.32%       
 
-|- execution                              0.065s  |- 95.80%   
+|- execution                              0.062s  |- 95.82%   
 
 ------------------------------------------------------------
 
-TOTAL                                     1.954s
+TOTAL                                     1.951s
 
 ============================================================
 
@@ -1534,13 +1498,13 @@ Time steps : 95/98, step size: 38.4211, 59.6548
 
 * One row per well: bottom-hole pressure, water rate, oil rate (producers only). ECL names the producers PNEAR (EDGE PRDCR) and PFAR (CRNR PRDCR).
 
-![png]({{ "/assets/images/benchmark_image_32.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_20.png" | relative_url }})
 
 ### Blocks
 
 * One row per block: pressure, temperature, oil saturation, gas saturation, CMG and ECL against OURS.
 
-![png]({{ "/assets/images/benchmark_image_33.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_21.png" | relative_url }})
 
 # Cyclic steam stimulation
 
@@ -1551,7 +1515,7 @@ stspe001.dat: Cyclic steam stimulation on radial grid
 ```
 Running simulation [simuapp]: Cyclic steam stimulation in Radial grid
 
-Elapsed: 0.99s
+Elapsed: 1.07s
 
    109  30.6814  6   1095.000     0.92              1.36             59.57                               0.413    8.821   0.1488    1.723
 
@@ -1567,45 +1531,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  0.736s  92.03%      
+Timeloop                                  0.806s  92.54%      
 
-|- Newton                                 0.694s  |- 94.21%   
+|- Newton                                 0.755s  |- 93.65%   
 
-  |- Update                               0.194s    |- 28.02% 
+  |- Update                               0.207s    |- 27.39% 
 
-  |- FluxJac                              0.133s    |- 19.21% 
+  |- FluxJac                              0.141s    |- 18.67% 
 
-  |- Precond                              0.086s    |- 12.45% 
+  |- Precond                              0.085s    |- 11.20% 
 
-  |- PerfJac                              0.075s    |- 10.88% 
+  |- PerfJac                              0.077s    |- 10.25% 
 
-  |- ScdAcc                               0.067s    |- 9.72%  
+  |- ScdAcc                               0.074s    |- 9.82%  
 
-  |- update_dev                           0.037s    |- 5.26%  
+  |- update_dev                           0.050s    |- 6.67%  
 
-  |- Solver                               0.034s    |- 4.85%  
+  |- Solver                               0.036s    |- 4.73%  
 
-  |- SanitizeJac                          0.027s    |- 3.89%  
+  |- SanitizeJac                          0.029s    |- 3.83%  
 
-  |- alignvar                             0.015s    |- 2.13%  
+  |- alignvar                             0.017s    |- 2.22%  
 
-  |- Residual                             0.005s    |- 0.71%  
+  |- Residual                             0.006s    |- 0.75%  
 
-  |- HeatLoss                             0.004s    |- 0.59%  
+  |- HeatLoss                             0.004s    |- 0.54%  
 
-|- Output                                 0.027s  |- 3.60%    
+|- Output                                 0.033s  |- 4.05%    
 
-|- Logging                                0.006s  |- 0.77%    
+|- Logging                                0.017s  |- 2.08%    
 
-|- Input                                  0.001s  |- 0.13%    
+|- Input                                  0.001s  |- 0.12%    
 
-Initialization                            0.064s  7.97%       
+Initialization                            0.065s  7.46%       
 
-|- execution                              0.061s  |- 96.10%   
+|- execution                              0.063s  |- 96.20%   
 
 ------------------------------------------------------------
 
-TOTAL                                     0.800s
+TOTAL                                     0.871s
 
 ============================================================
 
@@ -1615,7 +1579,7 @@ Time steps : 109/112, step size: 10.0459, 21.48
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_34.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_22.png" | relative_url }})
 
 ### Wells
 
@@ -1623,13 +1587,13 @@ Time steps : 109/112, step size: 10.0459, 21.48
 
 * Bottom-hole pressure is drawn only while the well flows: ECL reports 0 for a shut-in well and OURS holds its last value.
 
-![png]({{ "/assets/images/benchmark_image_35.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_23.png" | relative_url }})
 
 ### Blocks
 
 * One row per block: pressure, temperature, oil saturation, gas saturation, CMG and ECL against OURS.
 
-![png]({{ "/assets/images/benchmark_image_36.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_24.png" | relative_url }})
 
 
 
@@ -1641,7 +1605,7 @@ Cyclic steam stimulation on cartesian grid
 ```
 Running simulation [simuapp]: Cyclic steam stimulation in Cartesian
 
-Elapsed: 11.80s
+Elapsed: 10.99s
 
    146  78.9056  9   1095.000     1.47              1.19             44.73                               0.400   48.391   0.1032    5.193
 
@@ -1657,45 +1621,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                 11.537s  99.42%      
+Timeloop                                 10.717s  99.45%      
 
-|- Newton                                11.411s  |- 98.91%   
+|- Newton                                10.592s  |- 98.84%   
 
-  |- FluxJac                              4.162s    |- 36.47% 
+  |- FluxJac                              3.604s    |- 34.03% 
 
-  |- Update                               3.111s    |- 27.27% 
+  |- Update                               2.866s    |- 27.06% 
 
-  |- Solver                               1.543s    |- 13.52% 
+  |- Solver                               1.712s    |- 16.17% 
 
-  |- ScdAcc                               0.934s    |- 8.18%  
+  |- ScdAcc                               0.838s    |- 7.91%  
 
-  |- update_dev                           0.566s    |- 4.96%  
+  |- update_dev                           0.483s    |- 4.56%  
 
-  |- Precond                              0.475s    |- 4.16%  
+  |- Precond                              0.472s    |- 4.46%  
 
-  |- PerfJac                              0.113s    |- 0.99%  
+  |- PerfJac                              0.118s    |- 1.11%  
 
-  |- Residual                             0.104s    |- 0.91%  
+  |- HeatLoss                             0.098s    |- 0.93%  
 
-  |- HeatLoss                             0.098s    |- 0.86%  
+  |- Residual                             0.097s    |- 0.92%  
 
-  |- SanitizeJac                          0.094s    |- 0.82%  
+  |- SanitizeJac                          0.087s    |- 0.82%  
 
-  |- alignvar                             0.076s    |- 0.67%  
+  |- alignvar                             0.078s    |- 0.73%  
 
-|- Output                                 0.094s  |- 0.82%    
+|- Output                                 0.093s  |- 0.87%    
 
-|- Logging                                0.022s  |- 0.19%    
+|- Logging                                0.020s  |- 0.19%    
 
 |- Input                                  0.001s  |- 0.01%    
 
-Initialization                            0.067s  0.58%       
+Initialization                            0.059s  0.55%       
 
-|- execution                              0.065s  |- 95.91%   
+|- execution                              0.056s  |- 95.15%   
 
 ------------------------------------------------------------
 
-TOTAL                                    11.604s
+TOTAL                                    10.776s
 
 ============================================================
 
@@ -1712,11 +1676,11 @@ Loading: /Users/mark/Documents/workspace/hatch/app/build-release/test/data/stflu
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_37.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_25.png" | relative_url }})
 
 ### Wells
 
-![png]({{ "/assets/images/benchmark_image_38.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_26.png" | relative_url }})
 
 ## stflu009.dat - grid-resolution comparison (not PEBI-vs-Cartesian parity)
 
@@ -1771,7 +1735,7 @@ whole point of using PEBI in the first place.
 ```
 Running simulation [simuapp]: Cyclic steam stimulation in Pebi-grid
 
-Elapsed: 39.59s
+Elapsed: 39.03s
 
    129  13.2105  6   1095.000     0.55              0.33             37.37                               0.233   74.267   0.0327    0.736
 
@@ -1787,45 +1751,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                 39.254s  99.71%      
+Timeloop                                 38.425s  99.39%      
 
-|- Newton                                39.024s  |- 99.42%   
+|- Newton                                38.197s  |- 99.41%   
 
-  |- FluxJac                             16.316s    |- 41.81% 
+  |- FluxJac                             16.007s    |- 41.91% 
 
-  |- Update                               9.311s    |- 23.86% 
+  |- Update                               9.255s    |- 24.23% 
 
-  |- Solver                               6.872s    |- 17.61% 
+  |- Solver                               6.946s    |- 18.18% 
 
-  |- ScdAcc                               2.626s    |- 6.73%  
+  |- ScdAcc                               2.367s    |- 6.20%  
 
-  |- update_dev                           1.504s    |- 3.85%  
+  |- update_dev                           1.241s    |- 3.25%  
 
-  |- Precond                              1.207s    |- 3.09%  
+  |- Precond                              1.215s    |- 3.18%  
 
-  |- Residual                             0.301s    |- 0.77%  
+  |- Residual                             0.300s    |- 0.79%  
 
-  |- alignvar                             0.189s    |- 0.49%  
+  |- HeatLoss                             0.177s    |- 0.46%  
 
-  |- HeatLoss                             0.161s    |- 0.41%  
+  |- alignvar                             0.146s    |- 0.38%  
 
-  |- SanitizeJac                          0.100s    |- 0.26%  
+  |- SanitizeJac                          0.094s    |- 0.25%  
 
-  |- PerfJac                              0.071s    |- 0.18%  
+  |- PerfJac                              0.072s    |- 0.19%  
 
-|- Output                                 0.190s  |- 0.48%    
+|- Output                                 0.188s  |- 0.49%    
 
-|- Logging                                0.033s  |- 0.08%    
+|- Logging                                0.038s  |- 0.10%    
 
-|- Input                                  0.001s  |- 0.00%    
+|- Input                                  0.002s  |- 0.00%    
 
-Initialization                            0.116s  0.29%       
+Initialization                            0.234s  0.61%       
 
-|- execution                              0.084s  |- 72.56%   
+|- execution                              0.189s  |- 80.41%   
 
 ------------------------------------------------------------
 
-TOTAL                                    39.370s
+TOTAL                                    38.659s
 
 ============================================================
 
@@ -1842,9 +1806,9 @@ Loading: /Users/mark/Documents/workspace/hatch/app/build-release/test/data/stflu
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_39.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_27.png" | relative_url }})
 
-![png]({{ "/assets/images/benchmark_image_40.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_28.png" | relative_url }})
 
 ### stflu025.dat - near-well-refined PEBI (the real PEBI-vs-Cartesian parity case)
 
@@ -1886,7 +1850,7 @@ The three curves below are therefore the intended comparison:
 ```
 Running simulation [simuapp]: Cyclic steam stimulation in graded Pebi-grid
 
-Elapsed: 14.85s
+Elapsed: 14.95s
 
    205  88.9753  6   1095.000     1.57              1.73             52.46                               1.664   29.919   0.1321    2.902
 
@@ -1902,45 +1866,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                 14.495s  99.38%      
+Timeloop                                 14.548s  98.90%      
 
-|- Newton                                14.286s  |- 98.56%   
+|- Newton                                14.314s  |- 98.39%   
 
-  |- FluxJac                              5.613s    |- 39.29% 
+  |- FluxJac                              5.687s    |- 39.73% 
 
-  |- Update                               3.562s    |- 24.93% 
+  |- Update                               3.411s    |- 23.83% 
 
-  |- Solver                               2.248s    |- 15.74% 
+  |- Solver                               2.276s    |- 15.90% 
 
-  |- ScdAcc                               0.981s    |- 6.87%  
+  |- ScdAcc                               1.038s    |- 7.25%  
 
-  |- Precond                              0.598s    |- 4.19%  
+  |- Precond                              0.585s    |- 4.09%  
 
-  |- update_dev                           0.589s    |- 4.13%  
+  |- update_dev                           0.561s    |- 3.92%  
 
-  |- PerfJac                              0.176s    |- 1.23%  
+  |- PerfJac                              0.212s    |- 1.48%  
 
-  |- Residual                             0.113s    |- 0.79%  
+  |- Residual                             0.116s    |- 0.81%  
 
-  |- SanitizeJac                          0.109s    |- 0.76%  
+  |- SanitizeJac                          0.106s    |- 0.74%  
 
-  |- alignvar                             0.080s    |- 0.56%  
+  |- alignvar                             0.078s    |- 0.55%  
 
   |- HeatLoss                             0.060s    |- 0.42%  
 
-|- Output                                 0.162s  |- 1.11%    
+|- Output                                 0.190s  |- 1.31%    
 
-|- Logging                                0.028s  |- 0.19%    
+|- Logging                                0.025s  |- 0.17%    
 
 |- Input                                  0.001s  |- 0.01%    
 
-Initialization                            0.091s  0.62%       
+Initialization                            0.162s  1.10%       
 
-|- execution                              0.075s  |- 82.68%   
+|- execution                              0.136s  |- 84.18%   
 
 ------------------------------------------------------------
 
-TOTAL                                    14.586s
+TOTAL                                    14.710s
 
 ============================================================
 
@@ -1957,9 +1921,9 @@ Loading: /Users/mark/Documents/workspace/hatch/app/build-release/test/data/stflu
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_41.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_29.png" | relative_url }})
 
-![png]({{ "/assets/images/benchmark_image_42.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_30.png" | relative_url }})
 
 ### VAPEX (2D) Experiment 
 
@@ -1974,73 +1938,56 @@ Loading: /Users/mark/Documents/workspace/hatch/app/build-release/test/data/stflu
 ```
 Running simulation [simuapp]: Incomp GAS (-novtu)
 
-Elapsed: 3.05s
+Elapsed: 4.71s
 
-
-
-
-
-============================================================
-
-                WALL-TIME PERFORMANCE REPORT                
-
-============================================================
-
-Category                              Total Time  % Total     
-
-------------------------------------------------------------
-
-Timeloop                                  2.745s  97.41%      
-
-|- Newton                                 2.715s  |- 98.94%   
-
-  |- Solver                               0.670s    |- 24.68% 
-
-  |- Update                               0.670s    |- 24.67% 
-
-  |- FluxJac                              0.469s    |- 17.29% 
-
-  |- ScdAcc                               0.295s    |- 10.86% 
-
-  |- Precond                              0.294s    |- 10.84% 
-
-  |- update_dev                           0.121s    |- 4.45%  
-
-  |- SanitizeJac                          0.071s    |- 2.61%  
-
-  |- alignvar                             0.050s    |- 1.85%  
-
-  |- Residual                             0.016s    |- 0.58%  
-
-  |- PerfJac                              0.011s    |- 0.39%  
-
-  |- HeatLoss                             0.000s    |- 0.01%  
-
-|- Logging                                0.015s  |- 0.56%    
-
-|- Output                                 0.007s  |- 0.27%    
-
-|- Input                                  0.000s  |- 0.01%    
-
-Initialization                            0.073s  2.59%       
-
-|- execution                              0.066s  |- 90.07%   
-
-------------------------------------------------------------
-
-TOTAL                                     2.818s
-
-============================================================
-
-
-
-Time steps : 104/136, step size: 5.37694e-05, 3.05925e-05
+No text to display.
 
 ```
 
 ### Wells
 
-![png]({{ "/assets/images/benchmark_image_43.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_31.png" | relative_url }})
+
+### Step size
+
+* Steps are compared on simulated time, not step number: the two programs march different counts.
+
+* The first run in `runs` is the reference; the right panel is the interpolated dt ratio to it.
+
+* Fewer steps and Newton cycles at the same end time is cheaper, but only counts when the well curves above still agree.
+
+```
+run                 THERM      OURS
+
+steps                  61       290
+
+newton                224      2079
+
+newton/step         3.672     7.169
+
+cuts                    1        20
+
+dt min            5.8e-06  4.63e-06
+
+dt geomean      0.0001588 0.0008697
+
+dt max             0.0016   0.00174
+
+end day           0.01736     0.375
+
+steps@1.74e-05d         2         3
+
+steps@0.000174d        10         9
+
+steps@0.00174d         21        20
+
+steps@0.00868d         47        56
+
+steps@0.0174d          61        71
+
+```
+
+![png]({{ "/assets/images/benchmark_image_32.png" | relative_url }})
 
 ### SAGD
 
@@ -2049,9 +1996,9 @@ Time steps : 104/136, step size: 5.37694e-05, 3.05925e-05
 ```
 Running simulation [simuapp]: SAGD (-novtu)
 
-Elapsed: 5.08s
+Elapsed: 4.44s
 
-   220  14.9511  6   2526.000     5.89             53.45             90.08                      56.73    2.659    9.204   0.1761   24.588
+   213   8.3689  6   2526.000     5.46             52.70             90.61                      54.16    0.887    2.421   0.0351    5.494
 
 
 
@@ -2065,51 +2012,51 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  4.795s  98.74%      
+Timeloop                                  4.194s  98.67%      
 
-|- Newton                                 4.743s  |- 98.92%   
+|- Newton                                 4.151s  |- 98.98%   
 
-  |- Solver                               1.223s    |- 25.78% 
+  |- Solver                               1.073s    |- 25.85% 
 
-  |- Update                               1.154s    |- 24.34% 
+  |- Update                               0.999s    |- 24.06% 
 
-  |- FluxJac                              1.054s    |- 22.22% 
+  |- FluxJac                              0.943s    |- 22.71% 
 
-  |- ScdAcc                               0.442s    |- 9.32%  
+  |- ScdAcc                               0.355s    |- 8.56%  
 
-  |- Precond                              0.311s    |- 6.56%  
+  |- Precond                              0.271s    |- 6.53%  
 
-  |- update_dev                           0.235s    |- 4.96%  
+  |- update_dev                           0.207s    |- 4.98%  
 
-  |- SanitizeJac                          0.086s    |- 1.82%  
+  |- SanitizeJac                          0.075s    |- 1.80%  
 
-  |- alignvar                             0.067s    |- 1.41%  
+  |- alignvar                             0.064s    |- 1.55%  
 
-  |- PerfJac                              0.053s    |- 1.13%  
+  |- PerfJac                              0.045s    |- 1.08%  
 
-  |- Residual                             0.040s    |- 0.85%  
+  |- Residual                             0.038s    |- 0.91%  
 
-  |- HeatLoss                             0.009s    |- 0.19%  
+  |- HeatLoss                             0.008s    |- 0.19%  
 
-|- Logging                                0.022s  |- 0.46%    
+|- Logging                                0.027s  |- 0.65%    
 
-|- Output                                 0.014s  |- 0.30%    
+|- Output                                 0.012s  |- 0.28%    
 
 |- Input                                  0.001s  |- 0.01%    
 
-Initialization                            0.061s  1.26%       
+Initialization                            0.057s  1.33%       
 
-|- execution                              0.058s  |- 95.79%   
+|- execution                              0.054s  |- 95.51%   
 
 ------------------------------------------------------------
 
-TOTAL                                     4.856s
+TOTAL                                     4.251s
 
 ============================================================
 
 
 
-Time steps : 220/227, step size: 11.4818, 12.6998
+Time steps : 213/216, step size: 11.8592, 13.2579
 
 ```
 
@@ -2117,22 +2064,22 @@ Time steps : 220/227, step size: 11.4818, 12.6998
 
 * The reference here is the in-house Fortran code (stm_stflu020_*.csv), labelled FORTRAN. It reports producer rates negative.
 
-![png]({{ "/assets/images/benchmark_image_44.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_33.png" | relative_url }})
 
 ### Blocks
 
 * One row per block: pressure, temperature, water, oil and gas saturation. (1,5,13) sits near the injector and (1,5,18) near the producer.
 
-![png]({{ "/assets/images/benchmark_image_45.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_34.png" | relative_url }})
 
 #### 2D along well
 
 ```
 Running simulation [simuapp]: SAGD (-novtu)
 
-Elapsed: 5.67s
+Elapsed: 4.81s
 
-   149  19.2500  6   2526.000     9.67            119.47             92.51                     115.01    8.905    2.084   0.1468    1.691
+   121  69.3137  6   2526.000     0.56            147.79             99.63                     150.00    2.705   62.782   0.0124    3.427
 
 
 
@@ -2146,72 +2093,72 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  5.385s  98.89%      
+Timeloop                                  4.534s  98.67%      
 
-|- Newton                                 5.331s  |- 99.01%   
+|- Newton                                 4.495s  |- 99.14%   
 
-  |- Solver                               1.951s    |- 36.60% 
+  |- Solver                               1.446s    |- 32.17% 
 
-  |- Update                               0.983s    |- 18.43% 
+  |- Update                               0.840s    |- 18.68% 
 
-  |- FluxJac                              0.887s    |- 16.64% 
+  |- FluxJac                              0.778s    |- 17.32% 
 
-  |- PerfJac                              0.485s    |- 9.09%  
+  |- PerfJac                              0.539s    |- 11.99% 
 
-  |- ScdAcc                               0.342s    |- 6.41%  
+  |- ScdAcc                               0.295s    |- 6.57%  
 
-  |- Precond                              0.254s    |- 4.76%  
+  |- Precond                              0.214s    |- 4.77%  
 
-  |- update_dev                           0.200s    |- 3.75%  
+  |- update_dev                           0.182s    |- 4.04%  
 
-  |- SanitizeJac                          0.076s    |- 1.43%  
+  |- SanitizeJac                          0.067s    |- 1.48%  
 
-  |- alignvar                             0.052s    |- 0.98%  
+  |- alignvar                             0.044s    |- 0.98%  
 
-  |- Residual                             0.033s    |- 0.61%  
+  |- Residual                             0.028s    |- 0.63%  
 
-  |- HeatLoss                             0.008s    |- 0.14%  
+  |- HeatLoss                             0.006s    |- 0.14%  
 
-|- Logging                                0.021s  |- 0.39%    
+|- Logging                                0.019s  |- 0.42%    
 
-|- Output                                 0.016s  |- 0.30%    
+|- Output                                 0.012s  |- 0.27%    
 
-|- Input                                  0.001s  |- 0.01%    
+|- Input                                  0.000s  |- 0.01%    
 
-Initialization                            0.061s  1.11%       
+Initialization                            0.061s  1.33%       
 
-|- execution                              0.058s  |- 95.82%   
+|- execution                              0.058s  |- 95.21%   
 
 ------------------------------------------------------------
 
-TOTAL                                     5.445s
+TOTAL                                     4.595s
 
 ============================================================
 
 
 
-Time steps : 149/155, step size: 16.953, 33.9159
+Time steps : 121/129, step size: 20.876, 25.6384
 
 ```
 
 ### Wells
 
-![png]({{ "/assets/images/benchmark_image_46.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_35.png" | relative_url }})
 
 ### Blocks
 
 * One row per block: pressure, temperature, oil saturation, gas saturation. The blocks follow the producer-injector pair down the 10x1x20 grid.
 
-![png]({{ "/assets/images/benchmark_image_47.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_36.png" | relative_url }})
 
 #### 3D
 
 ```
 Running simulation [simuapp]: SAGD 3D (-novtu)
 
-Elapsed: 34.88s
+Elapsed: 32.01s
 
-   161   6.8613  7    680.000    19.95            102.68             83.73                      89.99    1.134    4.496   0.2286    7.734
+   149   7.8546  6    680.000    14.96             98.24             86.78                      93.47    1.144    3.640   0.1952   10.558
 
 
 
@@ -2225,51 +2172,51 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                 34.589s  99.82%      
+Timeloop                                 31.726s  99.77%      
 
-|- Newton                                34.498s  |- 99.74%   
+|- Newton                                31.647s  |- 99.75%   
 
-  |- Solver                              12.257s    |- 35.53% 
+  |- Solver                              11.090s    |- 35.04% 
 
-  |- FluxJac                              9.918s    |- 28.75% 
+  |- FluxJac                              9.367s    |- 29.60% 
 
-  |- Update                               7.033s    |- 20.39% 
+  |- Update                               6.263s    |- 19.79% 
 
-  |- ScdAcc                               1.898s    |- 5.50%  
+  |- ScdAcc                               1.896s    |- 5.99%  
 
-  |- update_dev                           1.206s    |- 3.49%  
+  |- update_dev                           1.030s    |- 3.25%  
 
-  |- Precond                              0.928s    |- 2.69%  
+  |- Precond                              0.852s    |- 2.69%  
 
-  |- PerfJac                              0.383s    |- 1.11%  
+  |- PerfJac                              0.363s    |- 1.15%  
 
-  |- Residual                             0.223s    |- 0.65%  
+  |- Residual                             0.201s    |- 0.64%  
 
-  |- alignvar                             0.140s    |- 0.41%  
+  |- alignvar                             0.128s    |- 0.41%  
 
-  |- SanitizeJac                          0.118s    |- 0.34%  
+  |- SanitizeJac                          0.101s    |- 0.32%  
 
-  |- HeatLoss                             0.101s    |- 0.29%  
+  |- HeatLoss                             0.093s    |- 0.29%  
 
-|- Logging                                0.042s  |- 0.12%    
+|- Logging                                0.031s  |- 0.10%    
 
-|- Output                                 0.028s  |- 0.08%    
+|- Output                                 0.024s  |- 0.08%    
 
 |- Input                                  0.001s  |- 0.00%    
 
-Initialization                            0.063s  0.18%       
+Initialization                            0.073s  0.23%       
 
-|- execution                              0.060s  |- 95.56%   
+|- execution                              0.070s  |- 96.15%   
 
 ------------------------------------------------------------
 
-TOTAL                                    34.652s
+TOTAL                                    31.798s
 
 ============================================================
 
 
 
-Time steps : 161/165, step size: 4.2236, 3.2094
+Time steps : 149/151, step size: 4.56376, 3.78217
 
 ```
 
@@ -2282,9 +2229,9 @@ Time steps : 161/165, step size: 4.2236, 3.2094
 ```
 Running simulation [simuapp]: SAGD live oil (-novtu)
 
-Elapsed: 12.22s
+Elapsed: 10.95s
 
-   170  32.7778  6   2526.000     0.16     0.04   120.96     0.26    99.87                     121.03    2.295    1.415   0.0043    0.264
+   139   4.8805  6   2526.000    34.63    24.84   151.10     0.72    81.35                     150.00    3.479    2.336   0.0437    0.441
 
 
 
@@ -2298,51 +2245,51 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                 11.936s  99.44%      
+Timeloop                                 10.665s  99.31%      
 
-|- Newton                                11.869s  |- 99.44%   
+|- Newton                                10.619s  |- 99.57%   
 
-  |- Solver                               6.144s    |- 51.76% 
+  |- Solver                               5.662s    |- 53.32% 
 
-  |- FluxJac                              1.675s    |- 14.11% 
+  |- FluxJac                              1.375s    |- 12.95% 
 
-  |- Update                               1.478s    |- 12.45% 
+  |- Update                               1.319s    |- 12.42% 
 
-  |- PerfJac                              0.816s    |- 6.88%  
+  |- PerfJac                              0.811s    |- 7.63%  
 
-  |- ScdAcc                               0.626s    |- 5.28%  
+  |- ScdAcc                               0.507s    |- 4.77%  
 
-  |- Precond                              0.417s    |- 3.51%  
+  |- Precond                              0.367s    |- 3.45%  
 
-  |- update_dev                           0.356s    |- 3.00%  
+  |- update_dev                           0.295s    |- 2.77%  
 
-  |- SanitizeJac                          0.120s    |- 1.02%  
+  |- SanitizeJac                          0.105s    |- 0.99%  
 
-  |- alignvar                             0.077s    |- 0.65%  
+  |- alignvar                             0.065s    |- 0.61%  
 
-  |- Residual                             0.055s    |- 0.46%  
+  |- Residual                             0.039s    |- 0.37%  
 
-  |- HeatLoss                             0.012s    |- 0.10%  
+  |- HeatLoss                             0.010s    |- 0.09%  
 
-|- Logging                                0.031s  |- 0.26%    
+|- Logging                                0.018s  |- 0.17%    
 
-|- Output                                 0.020s  |- 0.17%    
+|- Output                                 0.014s  |- 0.13%    
 
-|- Input                                  0.001s  |- 0.01%    
+|- Input                                  0.001s  |- 0.00%    
 
-Initialization                            0.067s  0.56%       
+Initialization                            0.074s  0.69%       
 
-|- execution                              0.064s  |- 95.35%   
+|- execution                              0.071s  |- 95.97%   
 
 ------------------------------------------------------------
 
-TOTAL                                    12.003s
+TOTAL                                    10.739s
 
 ============================================================
 
 
 
-Time steps : 170/179, step size: 14.8588, 13.1276
+Time steps : 139/146, step size: 18.1727, 19.159
 
 ```
 
@@ -2361,13 +2308,113 @@ OURS reached day 2526.0 of 2526
 
 * Top row: injector BHP and water rate, producer BHP. Bottom row: producer oil, water and gas rates. The wells are shut in until day 60.
 
-![png]({{ "/assets/images/benchmark_image_48.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_37.png" | relative_url }})
 
 ### Blocks
 
 * One row per block: pressure, temperature, oil saturation, gas saturation.
 
-![png]({{ "/assets/images/benchmark_image_49.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_38.png" | relative_url }})
+
+#### 3D live oil
+
+* 20x10x10 SAGD, live oil (CH4 + HOIL) with water. Injector 'Inj' (2:19,1,7) and producer 'Prod' (2:19,1,9); both are shut in and heated by `UHTR`/`TMPSET` for 60 days, then opened. The run ends at the first `*STOP`, day 680.
+
+* Reference is the `stars_stflu024.log` time step summary (one row per step), not a well-history CSV, so both sides are read from the same kind of table: simuapp is run with `-log` to write its own.
+
+* Injection is water only (steam, quality 0.85); the injection oil and gas columns are blank in both logs.
+
+```
+Running simulation [simuapp]: SAGD 3D live oil (-novtu)
+
+Elapsed: 45.42s
+
+No text to display.
+
+```
+
+```
+OURS reached day 680.0 of 680
+
+  CMG: 124 steps marched, 0 cuts, 289 Newton cycles
+
+ OURS: 140 steps marched, 8 cuts, 843 Newton cycles
+
+```
+
+### Wells
+
+* Rates are m3/day at standard conditions, read from the time step summary. The wells are shut in until day 60, so there is nothing to plot before it.
+
+![png]({{ "/assets/images/benchmark_image_39.png" | relative_url }})
+
+#### *KRTEMTAB verification (stflu028)
+
+* 5x5x1 FIELD grid with five producers and one injector, from the STARS `verify48` verification deck. `*KRTEMTAB` moves the relative permeability endpoints with temperature between 123 F and 500 F. The producers run on `*OPERATE *MAX *STO 30`; the injector is open from day 700 to day 1431. The run ends at day 2435.
+
+* Reference is the CMG `verify48` run: `stars_stflu028.log` (time step summary, field totals in FIELD units) and `stars_stfu028_special.csv` (pressure at blocks (1,2,1) and (2,3,1)). simuapp is run with `-log` so both sides of the rates are the same kind of table.
+
+```
+Running simulation [simuapp]: *KRTEMTAB verification (-novtu)
+
+Elapsed: 0.41s
+
+No text to display.
+
+```
+
+```
+OURS reached day 2435.0 of 2435
+
+  CMG: 90 steps marched, 0 cuts, 94 Newton cycles
+
+ OURS: 40 steps marched, 0 cuts, 134 Newton cycles
+
+```
+
+### Wells
+
+* Field totals from the time step summary. The CMG log is in bbl/day and ft3/day, ours in m3/day. The injector is open only between days 700 and 1431.
+
+![png]({{ "/assets/images/benchmark_image_40.png" | relative_url }})
+
+### Blocks
+
+* Pressure at the two blocks CMG reports. 5x5x1 grid, so the .smy block index is (i-1) + (j-1)*5: (1,2,1) is 5 and (2,3,1) is 11.
+
+![png]({{ "/assets/images/benchmark_image_41.png" | relative_url }})
+
+#### Temperature dependent relative permeability (stflu029)
+
+* 15x1x15 SI cross-section, injector 'Injector S1' at (1,1,15) and producer 'Producer P1' at (1,1,12). Both are shut in and heated by `UHTR`/`TMPSET` for 150 days, then opened. `*KRTEMTAB *SWR *SORW` moves the connate and critical water and the residual oil between 7 C and 307 C. The run ends at day 820.
+
+* Reference is the DeepFlow THERM `stars_stflu029.log` time step summary (one row per step), not a well-history CSV, so both sides are read from the same kind of table: simuapp is run with `-log` to write its own. Both logs are in m3/day.
+
+* Our log prints the rates with two decimals, so the oil and gas curves are coarse.
+
+```
+Running simulation [simuapp]: Temperature dependent relative permeability (-novtu)
+
+Elapsed: 4.07s
+
+No text to display.
+
+```
+
+```
+OURS reached day 820.0 of 820
+
+THERM: 506 steps marched, 0 cuts, 659 Newton cycles
+
+ OURS: 222 steps marched, 1 cuts, 1151 Newton cycles
+
+```
+
+### Wells
+
+* Rates are m3/day at standard conditions, read from the time step summary. The wells are shut in until day 150, so there is nothing to plot before it.
+
+![png]({{ "/assets/images/benchmark_image_42.png" | relative_url }})
 
 # Speed
 
@@ -2380,7 +2427,7 @@ OURS reached day 2526.0 of 2526
 ```
 Running simulation [simuapp]: Dome Corner point
 
-Elapsed: 2.59s
+Elapsed: 2.66s
 
     47  84.3856  1    365.000                                                                            0.020    0.014   0.0010   19.197
 
@@ -2396,45 +2443,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  2.277s  96.55%      
+Timeloop                                  2.366s  96.43%      
 
-|- Newton                                 2.256s  |- 99.09%   
+|- Newton                                 2.343s  |- 99.01%   
 
-  |- Solver                               0.867s    |- 38.45% 
+  |- Solver                               0.883s    |- 37.71% 
 
-  |- FluxJac                              0.539s    |- 23.91% 
+  |- Update                               0.563s    |- 24.04% 
 
-  |- Update                               0.511s    |- 22.64% 
+  |- FluxJac                              0.537s    |- 22.91% 
 
-  |- ScdAcc                               0.124s    |- 5.48%  
+  |- ScdAcc                               0.139s    |- 5.92%  
 
-  |- update_dev                           0.068s    |- 3.01%  
+  |- update_dev                           0.074s    |- 3.15%  
 
-  |- Precond                              0.063s    |- 2.79%  
+  |- Precond                              0.064s    |- 2.74%  
 
-  |- Residual                             0.023s    |- 1.02%  
+  |- Residual                             0.022s    |- 0.93%  
 
-  |- HeatLoss                             0.015s    |- 0.66%  
+  |- HeatLoss                             0.015s    |- 0.63%  
 
-  |- SanitizeJac                          0.010s    |- 0.42%  
+  |- alignvar                             0.009s    |- 0.40%  
 
-  |- alignvar                             0.009s    |- 0.38%  
+  |- SanitizeJac                          0.008s    |- 0.35%  
 
-  |- PerfJac                              0.001s    |- 0.07%  
+  |- PerfJac                              0.002s    |- 0.06%  
 
-|- Output                                 0.006s  |- 0.26%    
+|- Output                                 0.007s  |- 0.29%    
 
-|- Logging                                0.004s  |- 0.17%    
+|- Logging                                0.007s  |- 0.29%    
 
 |- Input                                  0.000s  |- 0.01%    
 
-Initialization                            0.081s  3.45%       
+Initialization                            0.088s  3.57%       
 
-|- execution                              0.073s  |- 90.06%   
+|- execution                              0.076s  |- 87.22%   
 
 ------------------------------------------------------------
 
-TOTAL                                     2.358s
+TOTAL                                     2.454s
 
 ============================================================
 
@@ -2451,7 +2498,7 @@ Loading: /Users/mark/Documents/workspace/hatch/app/build-release/test/data/stflu
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_50.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_43.png" | relative_url }})
 
 ## Heterogeneous
 
@@ -2460,7 +2507,7 @@ Loading: /Users/mark/Documents/workspace/hatch/app/build-release/test/data/stflu
 ```
 Running simulation [simuapp]: SPE10 benchmark 2D water flooding 375 days ~7s single thread (OMP_NUM_THREADS=8)
 
-Elapsed: 9.32s
+Elapsed: 8.45s
 
     92   0.8247  6    375.000    19.31             4e-06             2e-05                      19.43    0.000    0.216   0.0181    0.005
 
@@ -2476,45 +2523,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  9.017s  99.17%      
+Timeloop                                  8.179s  99.18%      
 
-|- Newton                                 8.890s  |- 98.60%   
+|- Newton                                 8.015s  |- 98.00%   
 
-  |- FluxJac                              2.732s    |- 30.73% 
+  |- Update                               2.463s    |- 30.72% 
 
-  |- Update                               2.699s    |- 30.36% 
+  |- FluxJac                              2.409s    |- 30.06% 
 
-  |- Solver                               1.297s    |- 14.59% 
+  |- Solver                               1.270s    |- 15.84% 
 
-  |- ScdAcc                               0.794s    |- 8.93%  
+  |- ScdAcc                               0.669s    |- 8.34%  
 
-  |- update_dev                           0.468s    |- 5.27%  
+  |- update_dev                           0.365s    |- 4.55%  
 
-  |- Precond                              0.311s    |- 3.50%  
+  |- Precond                              0.294s    |- 3.67%  
 
-  |- PerfJac                              0.249s    |- 2.80%  
+  |- PerfJac                              0.237s    |- 2.95%  
 
-  |- Residual                             0.100s    |- 1.12%  
+  |- Residual                             0.097s    |- 1.20%  
 
-  |- alignvar                             0.055s    |- 0.62%  
+  |- alignvar                             0.042s    |- 0.53%  
 
-  |- SanitizeJac                          0.041s    |- 0.46%  
+  |- SanitizeJac                          0.038s    |- 0.47%  
 
-  |- HeatLoss                             0.020s    |- 0.23%  
+  |- HeatLoss                             0.019s    |- 0.24%  
 
-|- Output                                 0.084s  |- 0.94%    
+|- Output                                 0.122s  |- 1.49%    
 
-|- Logging                                0.018s  |- 0.20%    
+|- Logging                                0.012s  |- 0.14%    
 
-|- Input                                  0.001s  |- 0.01%    
+|- Input                                  0.000s  |- 0.01%    
 
-Initialization                            0.076s  0.83%       
+Initialization                            0.068s  0.82%       
 
-|- execution                              0.068s  |- 89.90%   
+|- execution                              0.059s  |- 86.47%   
 
 ------------------------------------------------------------
 
-TOTAL                                     9.093s
+TOTAL                                     8.247s
 
 ============================================================
 
@@ -2524,7 +2571,7 @@ Time steps : 92/92, step size: 4.07609, 3.20218
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_51.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_44.png" | relative_url }})
 
 ### Medium size
 
@@ -2539,7 +2586,7 @@ Time steps : 92/92, step size: 4.07609, 3.20218
 ```
 Running simulation [simuapp]: Heterogeneous + 61wells - performance test medium size ~3m.50s (Single) (OMP_NUM_THREADS=8, -novtu)
 
-Elapsed: 243.74s
+Elapsed: 248.28s
 
     32  22.4900  5    365.000   257.24              8.04              3.03                     720.00    0.002  111.774   0.0064    1.456
 
@@ -2555,45 +2602,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                4m 2.02s  99.46%      
+Timeloop                                4m 6.41s  99.43%      
 
-|- Newton                               4m 1.53s  |- 99.80%   
+|- Newton                               4m 5.83s  |- 99.76%   
 
-  |- FluxJac                           1m 20.34s    |- 33.26% 
+  |- FluxJac                           1m 20.64s    |- 32.80% 
 
-  |- Update                             1m 8.06s    |- 28.18% 
+  |- Update                             1m 6.26s    |- 26.95% 
 
-  |- Solver                              48.870s    |- 20.23% 
+  |- Solver                              53.922s    |- 21.93% 
 
-  |- ScdAcc                              16.370s    |- 6.78%  
+  |- ScdAcc                              16.576s    |- 6.74%  
 
-  |- update_dev                           9.113s    |- 3.77%  
+  |- update_dev                           9.246s    |- 3.76%  
 
-  |- Precond                              7.756s    |- 3.21%  
+  |- Precond                              7.816s    |- 3.18%  
 
-  |- Residual                             3.003s    |- 1.24%  
+  |- Residual                             3.077s    |- 1.25%  
 
-  |- HeatLoss                             1.931s    |- 0.80%  
+  |- HeatLoss                             2.058s    |- 0.84%  
 
-  |- PerfJac                              1.450s    |- 0.60%  
+  |- PerfJac                              1.489s    |- 0.61%  
 
-  |- alignvar                             0.867s    |- 0.36%  
+  |- alignvar                             0.805s    |- 0.33%  
 
-  |- SanitizeJac                          0.505s    |- 0.21%  
+  |- SanitizeJac                          0.525s    |- 0.21%  
 
-|- Output                                 0.067s  |- 0.03%    
+|- Output                                 0.080s  |- 0.03%    
 
-|- Logging                                0.015s  |- 0.01%    
+|- Logging                                0.020s  |- 0.01%    
 
-|- Input                                  0.003s  |- 0.00%    
+|- Input                                  0.005s  |- 0.00%    
 
-Initialization                            1.306s  0.54%       
+Initialization                            1.424s  0.57%       
 
-|- execution                              1.167s  |- 89.31%   
+|- execution                              1.285s  |- 90.26%   
 
 ------------------------------------------------------------
 
-TOTAL                                   4m 3.32s
+TOTAL                                   4m 7.84s
 
 ============================================================
 
@@ -2608,7 +2655,7 @@ Time steps : 32/32, step size: 11.4062, 13.2808
 ```
 Running simulation [simuapp]: Johnansen water flooding takes ~5m on M2 (OMP_NUM_THREADS=8)
 
-Elapsed: 18.81s
+Elapsed: 21.94s
 
     17 365.0000  1   3650.000   353.53              0.07              0.02                     188.86    0.000    3.270   0.0067  3.1e-04
 
@@ -2624,45 +2671,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                 17.400s  94.88%      
+Timeloop                                 20.448s  95.12%      
 
-|- Newton                                17.276s  |- 99.29%   
+|- Newton                                20.316s  |- 99.36%   
 
-  |- Update                               5.693s    |- 32.95% 
+  |- FluxJac                              7.062s    |- 34.76% 
 
-  |- FluxJac                              5.554s    |- 32.15% 
+  |- Update                               6.637s    |- 32.67% 
 
-  |- Solver                               2.850s    |- 16.50% 
+  |- Solver                               3.280s    |- 16.15% 
 
-  |- ScdAcc                               1.250s    |- 7.24%  
+  |- ScdAcc                               1.330s    |- 6.55%  
 
-  |- update_dev                           0.730s    |- 4.22%  
+  |- update_dev                           0.675s    |- 3.32%  
 
-  |- Precond                              0.532s    |- 3.08%  
+  |- Precond                              0.622s    |- 3.06%  
 
-  |- Residual                             0.273s    |- 1.58%  
+  |- Residual                             0.293s    |- 1.44%  
 
-  |- alignvar                             0.065s    |- 0.38%  
+  |- alignvar                             0.069s    |- 0.34%  
 
-  |- SanitizeJac                          0.031s    |- 0.18%  
+  |- SanitizeJac                          0.032s    |- 0.16%  
 
   |- PerfJac                              0.002s    |- 0.01%  
 
   |- HeatLoss                             0.000s    |- 0.00%  
 
-|- Output                                 0.087s  |- 0.50%    
+|- Output                                 0.091s  |- 0.44%    
 
 |- Logging                                0.002s  |- 0.01%    
 
 |- Input                                  0.000s  |- 0.00%    
 
-Initialization                            0.939s  5.12%       
+Initialization                            1.049s  4.88%       
 
-|- execution                              0.627s  |- 66.80%   
+|- execution                              0.730s  |- 69.62%   
 
 ------------------------------------------------------------
 
-TOTAL                                    18.339s
+TOTAL                                    21.496s
 
 ============================================================
 
@@ -2674,7 +2721,7 @@ Loading: /Users/mark/Documents/workspace/hatch/app/build-release/test/data//stfl
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_52.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_45.png" | relative_url }})
 
 # MPI
 
@@ -2711,7 +2758,7 @@ simumpi available: True
 ```
 Running simulation [simuapp]: MPI comparison baseline (OMP_NUM_THREADS=1, -novtu)
 
-Elapsed: 1.68s
+Elapsed: 1.72s
 
     81  85.9779  6   3650.000     0.01              4.40             99.73                       4.59    0.119    1.494   0.0052    1.644
 
@@ -2727,45 +2774,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                  1.445s  96.11%      
+Timeloop                                  1.446s  94.01%      
 
-|- Newton                                 1.423s  |- 98.52%   
+|- Newton                                 1.423s  |- 98.42%   
 
-  |- FluxJac                              0.620s    |- 43.55% 
+  |- FluxJac                              0.598s    |- 42.01% 
 
-  |- Update                               0.309s    |- 21.73% 
+  |- Update                               0.334s    |- 23.48% 
 
-  |- ScdAcc                               0.152s    |- 10.71% 
+  |- ScdAcc                               0.149s    |- 10.49% 
 
-  |- Solver                               0.139s    |- 9.77%  
+  |- Solver                               0.137s    |- 9.63%  
 
-  |- update_dev                           0.109s    |- 7.63%  
+  |- update_dev                           0.109s    |- 7.68%  
 
-  |- PerfJac                              0.037s    |- 2.62%  
+  |- PerfJac                              0.038s    |- 2.66%  
 
   |- Precond                              0.022s    |- 1.52%  
 
   |- alignvar                             0.008s    |- 0.58%  
 
-  |- Residual                             0.006s    |- 0.43%  
+  |- Residual                             0.006s    |- 0.44%  
 
   |- HeatLoss                             0.005s    |- 0.33%  
 
   |- SanitizeJac                          0.001s    |- 0.10%  
 
-|- Output                                 0.007s  |- 0.46%    
+|- Output                                 0.007s  |- 0.50%    
 
-|- Logging                                0.005s  |- 0.32%    
+|- Logging                                0.005s  |- 0.34%    
 
 |- Input                                  0.000s  |- 0.01%    
 
-Initialization                            0.059s  3.89%       
+Initialization                            0.092s  5.99%       
 
-|- execution                              0.056s  |- 95.65%   
+|- execution                              0.090s  |- 97.22%   
 
 ------------------------------------------------------------
 
-TOTAL                                     1.503s
+TOTAL                                     1.538s
 
 ============================================================
 
@@ -2775,7 +2822,7 @@ Time steps : 81/81, step size: 45.0617, 50.5258
 
 Running simulation [simumpi]: MPI comparison np=1 (OMP_NUM_THREADS=1, np=1, -novtu)
 
-Elapsed: 1.73s
+Elapsed: 1.80s
 
 
 
@@ -2839,7 +2886,7 @@ Time steps : 82/82, step size: 44.5122, 50.2074
 
 Running simulation [simumpi]: MPI comparison np=2 (OMP_NUM_THREADS=1, np=2, -novtu)
 
-Elapsed: 1.07s
+Elapsed: 1.11s
 
 
 
@@ -2903,7 +2950,7 @@ Time steps : 82/82, step size: 44.5122, 50.1535
 
 Running simulation [simumpi]: MPI comparison np=4 (OMP_NUM_THREADS=1, np=4, -novtu)
 
-Elapsed: 0.89s
+Elapsed: 1.09s
 
 
 
@@ -2965,13 +3012,13 @@ Elapsed: 0.89s
 
 Time steps : 82/82, step size: 44.5122, 50.2431
 
-simuapp          rc=0   1.50s   81/ 81 steps  to  3650.00 days
+simuapp          rc=0   1.54s   81/ 81 steps  to  3650.00 days
 
-simumpi np=1     rc=0   1.35s   82/ 82 steps,  0 cuts  to  3650.00 days
+simumpi np=1     rc=0   1.47s   82/ 82 steps,  0 cuts  to  3650.00 days
 
-simumpi np=2     rc=0   0.81s   82/ 82 steps,  0 cuts  to  3650.00 days
+simumpi np=2     rc=0   0.85s   82/ 82 steps,  0 cuts  to  3650.00 days
 
-simumpi np=4     rc=0   0.56s   82/ 82 steps,  0 cuts  to  3650.00 days
+simumpi np=4     rc=0   0.73s   82/ 82 steps,  0 cuts  to  3650.00 days
 
 ```
 
@@ -3020,21 +3067,7 @@ BHP moving off CMG together points at the trajectory; one well's rate alone poin
 constraint timing.
 
 
-![png]({{ "/assets/images/benchmark_image_53.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_54.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_55.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_56.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_57.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_58.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_59.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_60.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_46.png" | relative_url }})
 
 ### Cyclic steam stimulation across rank counts
 
@@ -3062,7 +3095,7 @@ each rank count as its own markers.
 ```
 Running simulation [simuapp]: CSS parity baseline (OMP_NUM_THREADS=1, -novtu)
 
-Elapsed: 23.11s
+Elapsed: 23.27s
 
    146  78.9056  9   1095.000     1.47              1.19             44.73                               0.400   48.391   0.1032    5.193
 
@@ -3078,45 +3111,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                 22.863s  99.72%      
+Timeloop                                 22.997s  99.68%      
 
-|- Newton                                22.834s  |- 99.87%   
+|- Newton                                22.965s  |- 99.86%   
 
-  |- FluxJac                             11.417s    |- 50.00% 
+  |- FluxJac                             11.439s    |- 49.81% 
 
-  |- Update                               5.176s    |- 22.67% 
+  |- Update                               5.228s    |- 22.76% 
 
-  |- ScdAcc                               2.286s    |- 10.01% 
+  |- ScdAcc                               2.301s    |- 10.02% 
 
-  |- update_dev                           1.550s    |- 6.79%  
+  |- update_dev                           1.545s    |- 6.73%  
 
-  |- Solver                               1.442s    |- 6.32%  
+  |- Solver                               1.470s    |- 6.40%  
 
-  |- Precond                              0.413s    |- 1.81%  
+  |- Precond                              0.417s    |- 1.82%  
 
-  |- alignvar                             0.128s    |- 0.56%  
+  |- alignvar                             0.126s    |- 0.55%  
 
-  |- PerfJac                              0.108s    |- 0.47%  
+  |- PerfJac                              0.112s    |- 0.49%  
 
-  |- Residual                             0.092s    |- 0.40%  
+  |- Residual                             0.093s    |- 0.40%  
 
-  |- HeatLoss                             0.084s    |- 0.37%  
+  |- HeatLoss                             0.085s    |- 0.37%  
 
   |- SanitizeJac                          0.025s    |- 0.11%  
 
-|- Logging                                0.009s  |- 0.04%    
+|- Logging                                0.015s  |- 0.06%    
 
-|- Output                                 0.009s  |- 0.04%    
+|- Output                                 0.010s  |- 0.04%    
 
 |- Input                                  0.001s  |- 0.00%    
 
-Initialization                            0.064s  0.28%       
+Initialization                            0.073s  0.32%       
 
-|- execution                              0.061s  |- 96.48%   
+|- execution                              0.071s  |- 96.57%   
 
 ------------------------------------------------------------
 
-TOTAL                                    22.927s
+TOTAL                                    23.070s
 
 ============================================================
 
@@ -3126,7 +3159,7 @@ Time steps : 146/155, step size: 7.5, 16.0457
 
 Running simulation [simumpi]: CSS parity np=1 (OMP_NUM_THREADS=1, np=1, -novtu)
 
-Elapsed: 20.33s
+Elapsed: 21.51s
 
    113   1.1331  6    736.486                                                                  158.99    0.140  202.569   0.1297   35.294
 
@@ -3190,7 +3223,7 @@ Time steps : 134/138, step size: 8.17164, 15.9471
 
 Running simulation [simumpi]: CSS parity np=2 (OMP_NUM_THREADS=1, np=2, -novtu)
 
-Elapsed: 13.54s
+Elapsed: 14.05s
 
 =========================================================================================================================================
 
@@ -3206,13 +3239,13 @@ Elapsed: 13.54s
 
    121   7.0000  6    747.000                                                                            0.360  1.2e+03   0.1697   29.360
 
-[rank 1] linear solve did not converge: DIVERGED_ITS after 500 iterations (residual norm 0.445431) - this cycle cannot be accepted as converged
-
 [rank 0] linear solve did not converge: DIVERGED_ITS after 500 iterations (residual norm 0.445431) - this cycle cannot be accepted as converged
 
-[rank 1] linear solve did not converge: DIVERGED_ITS after 500 iterations (residual norm 0.0822024) - this cycle cannot be accepted as converged
+[rank 1] linear solve did not converge: DIVERGED_ITS after 500 iterations (residual norm 0.445431) - this cycle cannot be accepted as converged
 
 [rank 0] linear solve did not converge: DIVERGED_ITS after 500 iterations (residual norm 0.0822024) - this cycle cannot be accepted as converged
+
+[rank 1] linear solve did not converge: DIVERGED_ITS after 500 iterations (residual norm 0.0822024) - this cycle cannot be accepted as converged
 
    122   1.0000  9    748.000     1.19            103.03             98.85                               0.374  1.1e+03   0.2303   47.444
 
@@ -3254,7 +3287,7 @@ Time steps : 139/144, step size: 7.8777, 16.1203
 
 Running simulation [simumpi]: CSS parity np=4 (OMP_NUM_THREADS=1, np=4, -novtu)
 
-Elapsed: 7.17s
+Elapsed: 7.87s
 
 [rank 3] linear solve did not converge: DIVERGED_ITS after 500 iterations (residual norm 0.238395) - this cycle cannot be accepted as converged
 
@@ -3316,19 +3349,17 @@ Elapsed: 7.17s
 
 Time steps : 132/134, step size: 8.29545, 17.2189
 
-simuapp          rc=0  22.93s  146/155 steps  to  1095.00 days
+simuapp          rc=0  23.07s  146/155 steps  to  1095.00 days
 
-simumpi np=1     rc=0  20.07s  134/138 steps,  4 cuts  to  1095.00 days
+simumpi np=1     rc=0  21.20s  134/138 steps,  4 cuts  to  1095.00 days
 
-simumpi np=2     rc=0  13.25s  139/144 steps,  5 cuts  to  1095.00 days
+simumpi np=2     rc=0  13.71s  139/144 steps,  5 cuts  to  1095.00 days
 
-simumpi np=4     rc=0   6.81s  132/134 steps,  2 cuts  to  1095.00 days
+simumpi np=4     rc=0   7.54s  132/134 steps,  2 cuts  to  1095.00 days
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_61.png" | relative_url }})
-
-![png]({{ "/assets/images/benchmark_image_62.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_47.png" | relative_url }})
 
 ### Wall-clock scaling
 
@@ -3448,7 +3479,7 @@ at startup, so nothing in the per-Newton-iteration refresh scales with the globa
 ```
 Running simulation [simuapp]: scaling baseline (attempt 1/2) (OMP_NUM_THREADS=1, -novtu)
 
-Elapsed: 37.48s
+Elapsed: 39.56s
 
 
 
@@ -3464,45 +3495,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                 35.797s  96.28%      
+Timeloop                                 37.751s  96.23%      
 
-|- Newton                                35.723s  |- 99.79%   
+|- Newton                                37.614s  |- 99.64%   
 
-  |- FluxJac                             15.677s    |- 43.89% 
+  |- FluxJac                             16.213s    |- 43.10% 
 
-  |- Update                              10.793s    |- 30.21% 
+  |- Update                              11.232s    |- 29.86% 
 
-  |- ScdAcc                               3.403s    |- 9.52%  
+  |- ScdAcc                               3.624s    |- 9.63%  
 
-  |- update_dev                           2.209s    |- 6.18%  
+  |- Solver                               2.520s    |- 6.70%  
 
-  |- Solver                               2.080s    |- 5.82%  
+  |- update_dev                           2.270s    |- 6.03%  
 
-  |- Precond                              0.669s    |- 1.87%  
+  |- Precond                              0.692s    |- 1.84%  
 
-  |- Residual                             0.212s    |- 0.59%  
+  |- Residual                             0.273s    |- 0.73%  
 
-  |- alignvar                             0.186s    |- 0.52%  
+  |- alignvar                             0.199s    |- 0.53%  
 
-  |- HeatLoss                             0.103s    |- 0.29%  
+  |- HeatLoss                             0.114s    |- 0.30%  
 
-  |- PerfJac                              0.083s    |- 0.23%  
+  |- PerfJac                              0.087s    |- 0.23%  
 
-  |- SanitizeJac                          0.052s    |- 0.15%  
+  |- SanitizeJac                          0.070s    |- 0.18%  
 
-|- Output                                 0.008s  |- 0.02%    
+|- Output                                 0.009s  |- 0.02%    
 
-|- Logging                                0.001s  |- 0.00%    
+|- Logging                                0.002s  |- 0.00%    
 
 |- Input                                  0.000s  |- 0.00%    
 
-Initialization                            1.382s  3.72%       
+Initialization                            1.480s  3.77%       
 
-|- execution                              1.242s  |- 89.82%   
+|- execution                              1.321s  |- 89.27%   
 
 ------------------------------------------------------------
 
-TOTAL                                    37.179s
+TOTAL                                    39.231s
 
 ============================================================
 
@@ -3512,7 +3543,7 @@ Time steps : 4/4, step size: 0.129481, 0.0270325
 
 Running simulation [simuapp]: scaling baseline (attempt 2/2) (OMP_NUM_THREADS=1, -novtu)
 
-Elapsed: 36.84s
+Elapsed: 39.36s
 
 
 
@@ -3528,45 +3559,45 @@ Category                              Total Time  % Total
 
 ------------------------------------------------------------
 
-Timeloop                                 35.216s  96.33%      
+Timeloop                                 37.595s  96.25%      
 
-|- Newton                                35.142s  |- 99.79%   
+|- Newton                                37.504s  |- 99.76%   
 
-  |- FluxJac                             15.566s    |- 44.29% 
+  |- FluxJac                             16.120s    |- 42.98% 
 
-  |- Update                              10.637s    |- 30.27% 
+  |- Update                              11.240s    |- 29.97% 
 
-  |- ScdAcc                               3.333s    |- 9.48%  
+  |- ScdAcc                               3.511s    |- 9.36%  
 
-  |- update_dev                           2.149s    |- 6.12%  
+  |- Solver                               2.677s    |- 7.14%  
 
-  |- Solver                               1.966s    |- 5.60%  
+  |- update_dev                           2.277s    |- 6.07%  
 
-  |- Precond                              0.623s    |- 1.77%  
+  |- Precond                              0.633s    |- 1.69%  
 
-  |- Residual                             0.209s    |- 0.59%  
+  |- Residual                             0.245s    |- 0.65%  
 
-  |- alignvar                             0.181s    |- 0.52%  
+  |- alignvar                             0.215s    |- 0.57%  
 
-  |- HeatLoss                             0.111s    |- 0.31%  
+  |- HeatLoss                             0.124s    |- 0.33%  
 
-  |- PerfJac                              0.083s    |- 0.24%  
+  |- PerfJac                              0.087s    |- 0.23%  
 
-  |- SanitizeJac                          0.059s    |- 0.17%  
+  |- SanitizeJac                          0.075s    |- 0.20%  
 
-|- Output                                 0.010s  |- 0.03%    
+|- Output                                 0.008s  |- 0.02%    
 
 |- Logging                                0.001s  |- 0.00%    
 
 |- Input                                  0.000s  |- 0.00%    
 
-Initialization                            1.340s  3.67%       
+Initialization                            1.463s  3.75%       
 
-|- execution                              1.210s  |- 90.33%   
+|- execution                              1.331s  |- 91.01%   
 
 ------------------------------------------------------------
 
-TOTAL                                    36.556s
+TOTAL                                    39.057s
 
 ============================================================
 
@@ -3576,7 +3607,7 @@ Time steps : 4/4, step size: 0.129481, 0.0270325
 
 Running simulation [simumpi]: scaling np=1 (attempt 1/2) (OMP_NUM_THREADS=1, np=1, -novtu)
 
-Elapsed: 37.17s
+Elapsed: 40.82s
 
           |   ||  |  __ |   \ |  ||   | `--.  .--' |  |____
 
@@ -3596,7 +3627,7 @@ Elapsed: 37.17s
 
             CONTACT: he.chron@gmail.com
 
-            DATE:    2026-11-01
+            DATE:    2026-11-04
 
 
 
@@ -3640,7 +3671,7 @@ Time steps : 4/4, step size: 0.129461, 0.0270306
 
 Running simulation [simumpi]: scaling np=1 (attempt 2/2) (OMP_NUM_THREADS=1, np=1, -novtu)
 
-Elapsed: 37.03s
+Elapsed: 40.00s
 
           |   ||  |  __ |   \ |  ||   | `--.  .--' |  |____
 
@@ -3660,7 +3691,7 @@ Elapsed: 37.03s
 
             CONTACT: he.chron@gmail.com
 
-            DATE:    2026-11-01
+            DATE:    2026-11-04
 
 
 
@@ -3704,7 +3735,7 @@ Time steps : 4/4, step size: 0.129461, 0.0270306
 
 Running simulation [simumpi]: scaling np=2 (attempt 1/2) (OMP_NUM_THREADS=1, np=2, -novtu)
 
-Elapsed: 19.84s
+Elapsed: 20.10s
 
           |   ||  |  __ |   \ |  ||   | `--.  .--' |  |____
 
@@ -3724,7 +3755,7 @@ Elapsed: 19.84s
 
             CONTACT: he.chron@gmail.com
 
-            DATE:    2026-11-01
+            DATE:    2026-11-04
 
 
 
@@ -3768,7 +3799,7 @@ Time steps : 4/4, step size: 0.129459, 0.0270311
 
 Running simulation [simumpi]: scaling np=2 (attempt 2/2) (OMP_NUM_THREADS=1, np=2, -novtu)
 
-Elapsed: 19.79s
+Elapsed: 20.52s
 
           |   ||  |  __ |   \ |  ||   | `--.  .--' |  |____
 
@@ -3788,7 +3819,7 @@ Elapsed: 19.79s
 
             CONTACT: he.chron@gmail.com
 
-            DATE:    2026-11-01
+            DATE:    2026-11-04
 
 
 
@@ -3832,7 +3863,7 @@ Time steps : 4/4, step size: 0.129459, 0.0270311
 
 Running simulation [simumpi]: scaling np=4 (attempt 1/2) (OMP_NUM_THREADS=1, np=4, -novtu)
 
-Elapsed: 11.90s
+Elapsed: 12.05s
 
           |   ||  |__| ||  |\   \||   |    |  |    |  |____
 
@@ -3848,7 +3879,7 @@ Elapsed: 11.90s
 
             CONTACT: he.chron@gmail.com
 
-            DATE:    2026-11-01
+            DATE:    2026-11-04
 
 
 
@@ -3896,11 +3927,7 @@ Time steps : 4/4, step size: 0.129461, 0.0270306
 
 Running simulation [simumpi]: scaling np=4 (attempt 2/2) (OMP_NUM_THREADS=1, np=4, -novtu)
 
-Elapsed: 12.15s
-
-          |   ||  |  __ |   \ |  ||   | `--.  .--' |  |____
-
-          |   ||  | |. ||  .  \  ||   |    |  |    |  .____|
+Elapsed: 12.40s
 
           |   ||  |__| ||  |\   \||   |    |  |    |  |____
 
@@ -3916,11 +3943,15 @@ Elapsed: 12.15s
 
             CONTACT: he.chron@gmail.com
 
-            DATE:    2026-11-01
+            DATE:    2026-11-04
 
 
 
 
+
+VTU generation is suppressed.
+
+VTU generation is suppressed.
 
 VTU generation is suppressed.
 
@@ -3960,7 +3991,17 @@ Time steps : 4/4, step size: 0.129461, 0.0270306
 
 Running simulation [simumpi]: scaling np=8 (attempt 1/2) (OMP_NUM_THREADS=1, np=8, -novtu)
 
-Elapsed: 10.66s
+Elapsed: 10.90s
+
+          |   ||  | |. ||  .  \  ||   |    |  |    |  .____|
+
+          |   ||  |__| ||  |\   \||   |    |  |    |  |____
+
+          |___| \______||__| \___||___|    |__|    |_______|
+
+
+
+            >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                  
 
 
 
@@ -3968,21 +4009,11 @@ Elapsed: 10.66s
 
             CONTACT: he.chron@gmail.com
 
-            DATE:    2026-11-01
+            DATE:    2026-11-04
 
 
 
 
-
-VTU generation is suppressed.
-
-VTU generation is suppressed.
-
-VTU generation is suppressed.
-
-VTU generation is suppressed.
-
-VTU generation is suppressed.
 
 VTU generation is suppressed.
 
@@ -4024,7 +4055,13 @@ Time steps : 4/4, step size: 0.129459, 0.0270297
 
 Running simulation [simumpi]: scaling np=8 (attempt 2/2) (OMP_NUM_THREADS=1, np=8, -novtu)
 
-Elapsed: 10.54s
+Elapsed: 12.26s
+
+          |   ||  |__| ||  |\   \||   |    |  |    |  |____
+
+          |___| \______||__| \___||___|    |__|    |_______|
+
+
 
             >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>                  
 
@@ -4034,17 +4071,11 @@ Elapsed: 10.54s
 
             CONTACT: he.chron@gmail.com
 
-            DATE:    2026-11-01
+            DATE:    2026-11-04
 
 
 
 
-
-VTU generation is suppressed.
-
-VTU generation is suppressed.
-
-VTU generation is suppressed.
 
 VTU generation is suppressed.
 
@@ -4088,26 +4119,26 @@ Time steps : 4/4, step size: 0.129459, 0.0270297
 
 ```
 
-![png]({{ "/assets/images/benchmark_image_63.png" | relative_url }})
+![png]({{ "/assets/images/benchmark_image_48.png" | relative_url }})
 
 ```
    config  steps   seconds   speedup   effic.  cells/rank   ghosts
 
-  simuapp      4     36.56         -        -           -        -
+  simuapp      4     39.06         -        -           -        -
 
-     np=1      4     34.75     1.00x     100%      202005        0
+     np=1      4     37.30     1.00x     100%      202005        0
 
-     np=2      4     18.11     1.92x      96%      101080     2110
+     np=2      4     18.30     2.04x     102%      101080     2110
 
-     np=4      4     10.56     3.29x      82%       50520     4235
+     np=4      4     10.68     3.49x      87%       50520     4235
 
-     np=8      4      8.81     3.95x      49%       25610     8325 *
+     np=8      4      9.04     4.13x      52%       25610     8325 *
 
   * more ranks than the 4 fast cores on this CPU - paced by the slow ones, so read the efficiency as the machine's, not the partition's
 
 ```
 
 ```
-Script completed at: 2026-11-02 11:24:01
+Script completed at: 2026-11-04 22:25:34
 
 ```
